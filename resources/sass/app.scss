@@ -1,7 +1,63 @@
+// Your custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+// @import "foundation/mixins/clearfix";
+// @import "foundation/mixins/css-triangle";
+// @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+// @import "foundation/mixins/respond-to";
+// @import "foundation/mixins/semantic-grid";
+
+// @import "modular-scale";
+// @import "foundation/common/globals";
+
+// Must include the grid for any responsiveness
+
+// @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+// @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+// @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+// @import "foundation/components/modules/clearing";
+// @import "foundation/components/modules/joyride";
+
+// Media Queries Overrides
+// @import "foundation/components/modules/mqueries";
+
+
+
+
 html,
 body {
 	margin: 0;
-	padding: 0;
+	padding: 0;	
 }
 
 
@@ -10,6 +66,7 @@ body {
 
 
 body {
+	/*	
 	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.5em;
 	background: #eeeeee;
@@ -17,6 +74,7 @@ body {
 	width: 520px;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
+	*/
 }
 
 #menu {
@@ -140,20 +198,9 @@ body {
 /**/
 
 .main-wrapper {
+	
 	display: none;
-	background: #ffffff;
-	padding: 20px;
-	margin-bottom: 40px;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-ms-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-o-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 6px 0;
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-ms-border-radius: 0 0 5px 5px;
-	-o-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;
+	background: #eeeeee;
 }
 
 #loading-page.main-wrapper {
@@ -161,12 +208,7 @@ body {
 	background: #dddddd;
 	color: #777777;
 }
-.main-wrapper  h1 {
-	font-size: 36px;
-	font-weight: bold;
-	text-align: center;
-	padding: 0 0 10px 0;
-}
+
 
 
 
