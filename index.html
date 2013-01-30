@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>A Backbone.js base, using the common PureMVC and Gaia framework conventions</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Cross-browser corrections -->
+    <link rel="stylesheet" href="resources/css/normalize.css">
+    <link rel="stylesheet" href="resources/css/main.css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="resources/css/app.css"/>
+
+    <!-- Modernizr detects HTML5 and CSS3 features in the user’s browser. More information: http://modernizr.com/ -->
+    <script src="resources/js/libs/modernizr/modernizr.min.js" ></script>
+
+    <!-- App javascript is placed at the end of the document so the pages load faster --> 
+
+</head>
+
+
+<body>
+
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <nav id="menu">
+    
+    <ul>
+      <li><a href="#"                 class="menu-item-1">home</a></li>
+      <li><a href="#gallery/"         class="menu-item-2">gallery</a></li>
+      <li><a href="#help/1"           class="menu-item-3">help</a></li>
+      <li><a href="#raphael/"         class="menu-item-5">raphael</a></li>
+      <li><a href="#parallax/intro"   class="menu-item-6">parallax</a></li>
+      <li><a href="#example/"         class="menu-item-7">example</a></li>
+    </ul>
+
+  </nav>
+
+
+  <div id="loading-page" class="main-wrapper">
+      <h1>One moment</h1>
+      <p>Loading..</p>
+  </div>
+
+
+  <div id="home-page" class="main-wrapper">
+      <h1>Home page</h1>
+      <p>Home content</p>
+  </div>
+
+
+  <div id="gallery-page" class="main-wrapper">
+      <h1>Gallery page</h1>
+      <p>This is an example of data <strong>loaded on demand</strong> by backbone, from an external JSON file. </p>
+      <div id="gallery-items-target">
+        <ul>
+        </ul>
+      </div>
+  </div>
+
+
+  <div id="help-page" class="main-wrapper">
+      <h1>Help page</h1>
+      <div class="submenu">        
+        <ul>
+          <li><a href="#help/1" class="menu-item-1">panel 1</a></li>
+          <li><a href="#help/2" class="menu-item-2">panel 2</a></li>
+          <li><a href="#help/3" class="menu-item-3">panel 3</a></li>
+        </ul>
+      </div>
+      
+      <div id="help-panel-1" class="panel-wrapper">help panel 1</div>
+      <div id="help-panel-2" class="panel-wrapper">help panel 2 is displayed here</div>
+      <div id="help-panel-3" class="panel-wrapper">why yes, this is help panel 3</div>
+
+  </div>
+
+
+
+  <div id="raphael-page" class="main-wrapper">
+      <h1>Raphael datavis page</h1>
+      <table id="for-chart">
+            <tfoot>
+                <tr>
+                    <td>&nbsp;</td>
+                    <th>1st</th>
+                    <th>2nd</th>
+                    <th>3rd</th>
+                    <th>4th</th>
+                    <th>5th</th>
+                    <th>6th</th>
+                    <th>7th</th>
+                    <th>8th</th>
+                    <th>9th</th>
+                    <th>10th</th>
+                    <th>11th</th>
+                    <th>12th</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th scope="row">&nbsp;Cats</th>
+                    <td>11</td>
+                    <td>19</td>
+                    <td>9</td>
+                    <td>5</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>8</td>
+                    <td>11</td>
+                    <td>9</td>
+                    <td>40</td>
+                    <td>20</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                <th scope="row">&nbsp;Dogs</th>
+                    <td>35</td>
+                    <td>11</td>
+                    <td>20</td>
+                    <td>2</td>
+                    <td>35</td>
+                    <td></td>
+                    <td>22</td>
+                    <td>30</td>
+                    <td></td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">&nbsp;Cows</th>
+                    <td></td>
+                    <td>31</td>
+                    <td></td>
+                    <td>19</td>
+                    <td>35</td>
+                    <td>12</td>
+                    <td>4</td>
+                    <td>25</td>
+                    <td></td>
+                    <td>1</td>
+                    <td>20</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">&nbsp;Bats</th>
+                    <td>12</td>
+                    <td>5</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td>37</td>
+                    <td>23</td>
+                    <td>17</td>
+                    <td>5</td>
+                    <td>32</td>
+                    <td></td>
+                    <td></td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="chart"></div>
+  </div>
+
+  <div id="parallax-page" class="main-wrapper">
+      <h1>Parallex page</h1>
+      <p>A simple version of parallax scrolling</p>
+      <p class="fixie"></p>
+      <div class="submenu-placeholder"></div> 
+      <div class="submenu">        
+        <ul>
+          <li><a class="menu-item-dogs" data-clickvalue="dogs">dogs</a></li>
+          <li><a class="menu-item-cats" data-clickvalue="cats">cats</a></li>
+          <li><a class="menu-item-cows" data-clickvalue="cows">cows</a></li>
+        </ul>
+      </div>
+      <div class="waypoint-section" data-value="dogs">
+        <h2>Section one: dogs</h2>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <hr/>
+      </div>
+      <div class="waypoint-section" data-value="cats">
+        <h2>Section two: cats</h2>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <hr/>
+      </div>
+      <div class="waypoint-section" data-value="cows">
+        <h2>Section three: cows</h2>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <hr/>
+      </div>
+  </div>
+
+  <div id="example-page" class="main-wrapper">
+      <h1>Example page</h1>
+      <p>Example content</p>
+  </div>
+
+
+
+
+  
+
+  <footer id="credits">
+    Footer text.
+  </footer>
+
+
+  <!-- javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <!-- raphael library (cannot load through require.js) -->
+  <script src="resources/js/libs/raphael/raphael.min.js" type="text/javascript" charset="utf-8"></script>
+  
+  <!--  require.js is a JavaScript file loader library. More information: http://requirejs.org/ -->
+  <script src="resources/js/libs/require/require.js" ></script>
+
+  <!--  Configures the backbone app then loads AppInit.js which is where the views and router are initialised. -->
+  <script src="resources/js/app/AppConfig.js" ></script>
+  
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
+  <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  -->
+  </body>
+</html>
