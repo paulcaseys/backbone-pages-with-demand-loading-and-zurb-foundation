@@ -34,7 +34,7 @@ define([
       el: $("#gallery-page"),
 
       // target for gallery
-      galleryItemsTarget: $('#gallery-items-target ul'),
+      galleryItemsTarget: $('#gallery-items-target'),
 
       // at initialization we bind to the relevant events
       initialize: function() {
@@ -66,8 +66,8 @@ define([
       createItem: function (curObj) { 
         //console.log(curObj.page_title);
         // <img src="'+curObj.page_image_url+'">
-        this.galleryItemsTarget.append('<li><a href="'+curObj.page_url+'" target="_blank" > '+curObj.page_title+'<br><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></li>');
-        var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerDisabled");
+        this.galleryItemsTarget.append('<div class="four columns"><a href="'+curObj.page_url+'" target="_blank" > '+curObj.page_title+'<br><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></div>');
+        var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
 
       },
       

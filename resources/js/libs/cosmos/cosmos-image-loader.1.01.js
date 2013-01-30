@@ -220,6 +220,9 @@ Cosmos.Utils.PositionImage = function(theTargetElement, varObj) {
 		var imgHeight = parseInt(curImage.height(), 10);
 		var imgAspect = imgWidth / imgHeight;
 
+		// overrides any max widths in the stylesheet
+		curImage.css({"max-width": "none"});
+		curImage.css({"max-height": "none"});
 
 		// crops and rescales the image
 		if(theRescale == "rescaleEnabled"){
