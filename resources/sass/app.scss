@@ -103,17 +103,26 @@ body {
 
 
 .submenu {
-  background: #aaa;
-  height: 30px; color: #fff; text-align: right;
-  width: 100%;
+  height: 30px; 
+  color: #fff; 
+}
+.group-left {
+	float: left;
+}
+.group-right {
+	float: right;
 }
 .submenu ul {
   list-style: none;
-  margin: 0; padding: 0;
+  margin: 0; 
+  padding: 0;
 }
 .submenu ul li {
   float: left;
   margin-left: 10px;
+}
+.submenu ul li:last-child {
+  margin-right: 10px;
 }
 .submenu ul li a {
   color: #ddd;
@@ -128,17 +137,27 @@ body {
   color: #fff;
 }
 
-.sticky .submenu {
-	position:fixed;
-	top:0;
-	left: -240px;
-	margin-left: 50%;
+
+.submenu-wrapper {
+	background: #aaa;
+	position: relative;
+}
+
+.submenu-wrapper.sticky {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100% !important;
+
+}
+.submenu.sticky {
+	width: 100% !important;
 }
 
 .submenu-placeholder {
 	height: 0px;
 }
-.sticky .submenu-placeholder {
+.submenu-placeholder.sticky  {
 	height: 30px;
 }
 

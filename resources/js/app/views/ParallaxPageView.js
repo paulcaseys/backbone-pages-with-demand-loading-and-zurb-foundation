@@ -201,16 +201,19 @@ define([
 
 		    	// SUBMENU WAYPOINT
 		    	// determines the subenu stickiness
-				$('#parallax-page .submenu').waypoint(function(event, direction) {
-					$('#parallax-page .submenu').parent().toggleClass('sticky', direction === "down");
-					$("#parallax-page .submenu-placeholder").parent().toggleClass('sticky', direction === "down");
+				$('#parallax-page .submenu-wrapper').waypoint(function(event, direction) {
+					console.log(direction);
+					$('#parallax-page .submenu').toggleClass('sticky', direction === "down");
+					$('#parallax-page .submenu-wrapper').toggleClass('sticky', direction === "down");
+					$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
 					event.stopPropagation();
 				});
-
+				/*
 				// clears sticky class
-				$('#parallax-page .submenu').parent().removeClass('sticky');
-				$('#parallax-page .submenu-placeholder').parent().removeClass('sticky');
-
+				$('#parallax-page .submenu').removeClass('sticky');
+				$('#parallax-page .submenu-wrapper').removeClass('sticky');
+				$('#parallax-page .submenu-placeholder').removeClass('sticky');
+				*/
 			}
 			
 			

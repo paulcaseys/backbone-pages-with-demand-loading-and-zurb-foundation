@@ -75,7 +75,7 @@ define([
             App.Models.PageStateModel.showView(App.Views.ParallaxPageView);
             App.Models.PageStateMenuModel.selectMenuItem(6, "#menu", "a", ".menu-item-");
 
-            setTimeout(function() { App.Views.ParallaxPageView.scrollTo(id); },100);
+            setTimeout(function() { App.Views.ParallaxPageView.scrollTo(id); }, 500);
 
         },
         getExample: function(){
