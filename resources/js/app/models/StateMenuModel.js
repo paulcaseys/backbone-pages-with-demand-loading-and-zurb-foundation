@@ -45,8 +45,10 @@ define([
       
       selectMenuItem: function(itemNumber, container, selectionGroup, uiniqueSelectionClassForId){
         
+        console.log(container+" "+itemNumber);
+
         // selects a menu item
-        $(container+" "+selectionGroup).removeClass('active');
+        $(container+" .active").removeClass('active');
 
         //checks if the assigned element actually exists
         if($(container+" "+selectionGroup+""+uiniqueSelectionClassForId+""+itemNumber).length === 0){
@@ -54,6 +56,7 @@ define([
           console.log("CLEARING ALL MENU ACTIVE STATES in selectMenuItem(); : possible error : no element at $("+container+" "+selectionGroup+""+uiniqueSelectionClassForId+""+itemNumber+");");
         } else {
           // ELEMENT EXISTS
+          $(container+" "+selectionGroup+""+uiniqueSelectionClassForId+""+itemNumber).parent().addClass('active');
           $(container+" "+selectionGroup+""+uiniqueSelectionClassForId+""+itemNumber).addClass('active');
         }
         

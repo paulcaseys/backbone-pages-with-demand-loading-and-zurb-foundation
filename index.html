@@ -20,6 +20,27 @@
     <!-- App styles -->
     <link rel="stylesheet" href="resources/css/app.css"/>
 
+<!--
+    <script src="resources/js/libs/foundation/modernizr.foundation.js"></script>
+
+  
+    <script src="resources/js/libs/foundation/jquery.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.reveal.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.orbit.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.forms.js"></script>
+    <script src="resources/js/libs/foundation/jquery.placeholder.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.tooltips.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.alerts.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.buttons.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.accordion.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.navigation.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+    <script src="resources/js/libs/foundation/jquery.foundation.tabs.js"></script>
+
+    <script src="resources/js/libs/foundation/jquery.foundation.topbar.js"></script>
+    <script src="resources/js/libs/foundation/app.js"></script>
+  -->
+
     <!-- Modernizr detects HTML5 and CSS3 features in the user’s browser. More information: http://modernizr.com/ -->
     <script src="resources/js/libs/modernizr/modernizr.min.js" ></script>
 
@@ -60,13 +81,15 @@
     <div class="twelve columns">
       <h1>Home page</h1>
 
+
+
       <div class="row">
         <div class="four columns">
           <dl>
             <hr>
             <dt><h5><a href="#gallery/">Gallery page</a></h5></dt>
             <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porta sapien in ante interdum at mattis nisi tincidunt. </dd>
-            <br><a class="button" href="gallery/">View our gallery »</a>
+            <br><a class="button" href="#gallery/">View our gallery »</a>
           </dl>
         </div>
         <div class="four columns">
@@ -103,16 +126,16 @@
   <div id="help-page" class="row main-wrapper">
     <div class="twelve columns">
       <h1>Help page</h1>
-      <div class="submenu-wrapper"> 
-        <div class="submenu" class="row">        
-          <ul class="inline-list">
+      <div class="submenu-wrapper">        
+          <ul class="nav-bar">
             <li><a href="#help/1" class="menu-item-1">panel 1</a></li>
             <li><a href="#help/2" class="menu-item-2">panel 2</a></li>
             <li><a href="#help/3" class="menu-item-3">panel 3</a></li>
           </ul>
-        </div>
       </div>
       
+
+
       <div id="help-panel-1" class="panel-wrapper">help panel 1</div>
       <div id="help-panel-2" class="panel-wrapper">help panel 2 is displayed here</div>
       <div id="help-panel-3" class="panel-wrapper">why yes, this is help panel 3</div>
@@ -214,32 +237,81 @@
 
   <div id="parallax-page" class="row main-wrapper">
     <div class="twelve columns">
-      <h1>Parallex page</h1>
-      <p>A simple version of parallax scrolling</p>
-      <p class="fixie"></p>
-      <div class="submenu-placeholder"></div> 
-      <div class="submenu-wrapper"> 
-        <div class="row">
-          <div class="twelve columns">
-            <div class="submenu">   
-              <div class="group-left">        
-                <ul class="inline-list">
-                  <li><a class="menu-item-dogs" data-clickvalue="dogs">dogs</a></li>
-                  <li><a class="menu-item-cats" data-clickvalue="cats">cats</a></li>
-                  <li><a class="menu-item-cows" data-clickvalue="cows">cows</a></li>
+
+      <div class="waypoint-section" data-value="null">
+        <h1>Parallex page</h1>
+
+
+
+
+
+
+
+
+
+        <p>A simple version of parallax scrolling</p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+        <p class="fixie"></p>
+      
+
+
+ 
+
+        <div class="submenu-wrapper"> 
+          <div class="row">
+            <div class="twelve columns">
+
+              <nav class="top-bar">
+
+                <ul>
+                  <!-- Title Area -->
+                  <li class="name">
+                    <h1>
+                      <a href="javascript:void();">
+                      </a>
+                    </h1>
+                  </li>
+                  <li class="toggle-topbar"><a href="javascript:void();"></a></li>
                 </ul>
-              </div>
-              <div class="group-right">         
-                <ul class="inline-list">
-                  <li><a class="menu-item-frogs" data-clickvalue="frogs">frogs</a></li>
-                  <li><a class="menu-item-fish" data-clickvalue="fish">fish</a></li> 
-                </ul>
-                  <a class="tiny button padded-cta" href="#">Home</a>
-              </div>
+
+
+                  <section>
+                    <ul class="left" >
+                      <li class="divider"></li>
+                      <li><a class="menu-item-dogs" data-clickvalue="dogs">dogs</a></li>
+                      <li class="divider"></li>
+                      <li><a class="menu-item-cats" data-clickvalue="cats">cats</a></li>
+                      <li class="divider"></li>
+                      <li><a class="menu-item-cows" data-clickvalue="cows">cows</a></li>
+                      <li class="divider"></li>
+                    </ul>
+                  </section>
+
+                  
+                  <section>
+                    <ul class="right" >
+                      <li class="divider"></li>
+                      <li><a class="menu-item-frogs" data-clickvalue="frogs">frogs</a></li>
+                      <li class="divider hide-for-small"></li>
+                      <li><a class="menu-item-fish" data-clickvalue="fish">fish</a></li>
+                      <li class="divider hide-for-small"></li>
+                      <a class="small button padded-cta" href="#">Home</a>
+                    </ul>
+                  </section>
+
+
+              </nav>
+
             </div>
           </div>
         </div>
-      </div> 
+
+        <div class="submenu-placeholder"></div>
+
+
+      </div>
+
       <div class="waypoint-section" data-value="dogs">
         <h2>Section one: dogs</h2>
         <p class="fixie"></p>

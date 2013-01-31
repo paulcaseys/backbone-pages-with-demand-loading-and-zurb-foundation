@@ -57,7 +57,7 @@ define([
             App.Models.HelpPanelsStateModel.showView(App.Views["HelpPanelView"+id]);
 
             // selects a menu item
-            App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#help-page .submenu", "a", ".menu-item-");
+            App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#help-page .submenu-wrapper", "a", ".menu-item-");
             
         },
         getDatavis: function(){

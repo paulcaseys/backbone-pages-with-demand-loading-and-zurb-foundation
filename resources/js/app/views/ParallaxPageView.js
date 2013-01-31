@@ -26,7 +26,9 @@ define([
   'fixie',
 
   // loads jquery easing (for better animations)
-  'jquery.easing'
+  'jquery.easing',
+  'foundationtopbar',
+  'foundationapp'
 
 
   // required collections
@@ -131,8 +133,12 @@ define([
 
 	    	
 	    	// submenu clicking
-			$("#parallax-page .submenu a").on(App.Models.ConfigModel.eventType, App.Models.ConfigModel.eventObj, submenuHandler);
+			$("#parallax-page .submenu-wrapper a").on(App.Models.ConfigModel.eventType, App.Models.ConfigModel.eventObj, submenuHandler);
 			
+			// clears the selected items
+			App.Models.ParallaxPageStateMenuModel.selectMenuItem('null', "#parallax-page .submenu-wrapper", "a", ".menu-item-");
+
+
 			function submenuHandler(){
 				var targetId = $(this).data('clickvalue');
 				App.Views.ParallaxPageView.scrollTo(targetId);
@@ -176,7 +182,7 @@ define([
 
 					var sectionValue = $active.data('value');
 
-					App.Models.ParallaxPageStateMenuModel.selectMenuItem(sectionValue, "#parallax-page .submenu", "a", ".menu-item-");
+					App.Models.ParallaxPageStateMenuModel.selectMenuItem(sectionValue, "#parallax-page .submenu-wrapper", "a", ".menu-item-");
 
 					// updates the uri hash, but does not route
 					//App.Router.navigate("/parallax/"+sectionValue, { trigger: false });
@@ -198,7 +204,7 @@ define([
 					}   
 				});
 
-
+				
 				// clears sticky class
 				$('#parallax-page .submenu').removeClass('sticky');
 				$('#parallax-page .submenu-wrapper').removeClass('sticky');
@@ -214,7 +220,7 @@ define([
 					$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
 					event.stopPropagation();
 				});
-				
+				/**/
 			}
 			
 			
@@ -226,7 +232,7 @@ define([
 	    	
 	    	
 	    	// removes submenu nav event
-	    	$("#parallax-page .submenu a").off();
+	    	$("#parallax-page .submenu-wrapper a").off();
 			
 			// checks if the device is a touch screen
 			if (App.Models.ConfigModel.touch === true){
@@ -235,7 +241,7 @@ define([
 			} else {
 				// IS NOT A TOUCH SCREEN
 	    		$('#parallax-page .waypoint-section').waypoint('destroy');
-	    		$('#parallax-page .submenu').waypoint('destroy');
+	    		$('#parallax-page .submenu-wrapper').waypoint('destroy');
 	    	}
 	    }
 

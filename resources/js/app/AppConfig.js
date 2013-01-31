@@ -76,6 +76,11 @@ requirejs.config({
 		// cosmos image loading (image loading and rescaler)
 		'cosmosimageloader': 	'resources/js/libs/cosmos/cosmos-image-loader.1.01',
 		
+		// foundation
+        'foundation': 'resources/js/libs/foundation',
+        'foundationtopbar': 'resources/js/libs/foundation/jquery.foundation.topbar',
+        'foundationapp': 'resources/js/libs/foundation/app',
+		
 		// paths to app initialiser
 		'AppInit': 								'resources/js/app/AppInit',
 
@@ -137,6 +142,14 @@ requirejs.config({
     'cosmosimageloader': {
     	deps: ["jquery"],
     	exports: "cosmosimageloader"
+    },
+    'foundationtopbar': { 
+    	deps: ["jquery"], 
+    	exports: "foundationtopbar"
+    },
+    'foundationapp': { 
+    	deps: ["jquery"], 
+    	exports: "foundationapp"
     }
   },
 	
