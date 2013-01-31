@@ -94,7 +94,7 @@ define([
         $(this.el).show();    
 
         // loading notification 
-        this.galleryItemsTarget.html('<br>Loading...');
+        this.galleryItemsTarget.html('<div class="four columns"><br>Loading...</div>');
 
         // loads the gallery items
         var GItems = new GalleryModel;
