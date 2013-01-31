@@ -66,7 +66,7 @@ define([
       createItem: function (curObj) { 
         //console.log(curObj.page_title);
         // <img src="'+curObj.page_image_url+'">
-        this.galleryItemsTarget.append('<div class="four columns"><a href="'+curObj.page_url+'" target="_blank" > '+curObj.page_title+'<br><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></div>');
+        this.galleryItemsTarget.append('<div class="four columns"><div class="panel"><a href="'+curObj.detail_Gen1+'" target="_blank"> <h6>'+curObj.page_title+'</h6><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></div></div>');
         var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
 
       },

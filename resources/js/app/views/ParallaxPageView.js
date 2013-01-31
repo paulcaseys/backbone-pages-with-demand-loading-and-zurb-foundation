@@ -199,6 +199,12 @@ define([
 				});
 
 
+				// clears sticky class
+				$('#parallax-page .submenu').removeClass('sticky');
+				$('#parallax-page .submenu-wrapper').removeClass('sticky');
+				$('#parallax-page .submenu-placeholder').removeClass('sticky');
+				
+
 		    	// SUBMENU WAYPOINT
 		    	// determines the subenu stickiness
 				$('#parallax-page .submenu-wrapper').waypoint(function(event, direction) {
@@ -208,12 +214,7 @@ define([
 					$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
 					event.stopPropagation();
 				});
-				/*
-				// clears sticky class
-				$('#parallax-page .submenu').removeClass('sticky');
-				$('#parallax-page .submenu-wrapper').removeClass('sticky');
-				$('#parallax-page .submenu-placeholder').removeClass('sticky');
-				*/
+				
 			}
 			
 			
