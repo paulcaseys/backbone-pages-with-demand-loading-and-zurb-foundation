@@ -158,6 +158,9 @@ define([
 				//$('#parallax-page .submenu').parent().addClass('sticky');
 				var thisCorrectsJSLint = null;
 
+				$('#parallax-page .submenu-wrapper').addClass('sticky');
+				$('#parallax-page .submenu-placeholder').addClass('sticky');
+
 			} else {
 				// IS NOT A TOUCH SCREEN
 				// regular waypoint settings
@@ -209,7 +212,6 @@ define([
 
 				
 				// clears sticky class
-				$('#parallax-page .submenu').removeClass('sticky');
 				$('#parallax-page .submenu-wrapper').removeClass('sticky');
 				$('#parallax-page .submenu-placeholder').removeClass('sticky');
 				
@@ -218,12 +220,11 @@ define([
 		    	// determines the subenu stickiness
 				$('#parallax-page .submenu-wrapper').waypoint(function(event, direction) {
 					console.log(direction);
-					$('#parallax-page .submenu').toggleClass('sticky', direction === "down");
 					$('#parallax-page .submenu-wrapper').toggleClass('sticky', direction === "down");
 					$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
 					event.stopPropagation();
 				});
-				/**/
+
 			}
 			
 			
