@@ -20,6 +20,9 @@
     <!-- App styles -->
     <link rel="stylesheet" href="resources/css/app.css"/>
 
+    <!-- video player styles -->
+    <link rel="stylesheet"  href="resources/css/video-js/video-js.css" type="text/css">
+
 <!--
     <script src="resources/js/libs/foundation/modernizr.foundation.js"></script>
 
@@ -64,6 +67,7 @@
       <li><a href="#raphael/"         class="menu-item-5">raphael</a></li>
       <li><a href="#parallax/intro"   class="menu-item-6">parallax</a></li>
       <li><a href="#example/"         class="menu-item-7">example</a></li>
+      <li><a href="#video/1"          class="menu-item-8">video</a></li>
     </ul>
 
   </nav>
@@ -493,12 +497,90 @@
 
 
 
+  <div id="video-page" class="row main-wrapper">
+    <div class="twelve columns">
+      <h1>Video Page</h1>
+
+      <div class="submenu-wrapper">        
+          <ul class="nav-bar">
+            <li><a href="#video/1" class="menu-item-1">video 1</a></li>
+            <li><a href="#video/2" class="menu-item-2">video 2</a></li>
+            <li><a href="#video/3" class="menu-item-3">video 3</a></li>
+          </ul>
+      </div>
+      
+
+
+      <div class="row">
+        <div class="twelve columns">
+          <div id="video-panel" class="panel-wrapper">video panel 1 is displayed here</div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
 
   
 
   <footer id="credits" class="row">
     Footer text.
   </footer>
+
+  <!-- video.js must be in the <head> for older IEs to work. 
+  <script src="resources/js/libs/video-js/video.js"></script>
+  -->
+
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+    //_V_.options.flash.swf = "resources/js/libs/video-js/video-js.swf";
+  </script>
+<!--
+  <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none"
+      data-setup="{}">
+  </video>
+-->
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+  /*
+    var videoElementID = 'example_video_1';
+
+    document.getElementById(videoElementID).setAttribute('poster','http://video-js.zencoder.com/oceans-clip.png');
+
+    _V_(videoElementID).ready(function(){
+
+      var myPlayer = this;
+
+      myPlayer.src([
+        { type: "video/mp4", src: "http://video-js.zencoder.com/oceans-clip.mp4" },
+        { type: "video/webm", src: "http://video-js.zencoder.com/oceans-clip.webm" },
+        { type: "video/ogg", src: "http://video-js.zencoder.com/oceans-clip.ogv" }
+      ]);
+
+      // set the size
+      var aspectRatio = 9/16; // Make up an aspect ratio
+
+
+      function resizeVideoJS(){
+        // Get the parent element's actual width
+        var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+        // Set width to fill parent element, Set height
+        myPlayer.width(width).height( width * aspectRatio );
+      }
+
+      resizeVideoJS(); // Initialize the function
+      window.onresize = resizeVideoJS; // Call the function on resize
+
+      // EXAMPLE: Start playing the video.
+      setTimeout(function() { myPlayer.play() }, 1000);
+
+    });
+*/
+  </script>
+
 
 
   <!-- javascript

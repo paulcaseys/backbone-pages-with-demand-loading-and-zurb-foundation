@@ -85,7 +85,11 @@ requirejs.config({
         'tweenlite': 		'resources/js/libs/tweenlite/TweenLite.min',
         'easepack': 		'resources/js/libs/tweenlite/EasePack.min',
         'cssplugin': 		'resources/js/libs/tweenlite/CSSPlugin.min',
+
+        // video-js (html5 video player, with swf fallback for old browsers)
+        'videojs':        'resources/js/libs/video-js/video.min',
 		
+
 		// paths to app initialiser
 		'AppInit': 								'resources/js/app/AppInit',
 
@@ -109,6 +113,8 @@ requirejs.config({
 		'App.Views.RaphaelPageView': 		'resources/js/app/views/RaphaelPageView',
 		'App.Views.ParallaxPageView': 		'resources/js/app/views/ParallaxPageView',
 		'App.Views.ExamplePageView': 		'resources/js/app/views/ExamplePageView',
+		'App.Views.VideoPageView': 			'resources/js/app/views/VideoPageView',
+		'App.Views.VideoPanelView': 		'resources/js/app/views/VideoPanelView',
 
 		// paths to collections
 		//'App.Collections.ExampleCollection': 	'resources/js/app/collections/ExampleCollection',
@@ -157,8 +163,12 @@ requirejs.config({
     	exports: "foundationapp"
     },
     'tweenlite': { 
-    	deps: ["cssplugin", "easepack"], 
-    	exports: "tweenlite"
+        deps: ["cssplugin", "easepack"], 
+        exports: "tweenlite"
+    },
+    'videojs': { 
+        deps: ["jquery"], 
+        exports: "videojs"
     }
   },
 	

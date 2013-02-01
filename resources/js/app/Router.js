@@ -33,6 +33,7 @@ define([
             "raphael/": "getRaphael",
             "parallax/:id": "getParallax",
             "example/": "getExample",
+            "video/:id": "getVideo",
             "*actions": "defaultRoute" // Backbone will try match the route above first
         },
 
@@ -53,11 +54,12 @@ define([
             App.Models.PageStateModel.showView(App.Views.HelpPageView);
             App.Models.PageStateMenuModel.selectMenuItem(3, "#menu", "a", ".menu-item-");
 
+            // selects a menu item
+            App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#help-page .submenu-wrapper", "a", ".menu-item-");
+            
             // defines which panel to display 
             App.Models.HelpPanelsStateModel.showView(App.Views["HelpPanelView"+id]);
 
-            // selects a menu item
-            App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#help-page .submenu-wrapper", "a", ".menu-item-");
             
         },
         getDatavis: function(){
@@ -82,6 +84,17 @@ define([
             console.log('route: example');
             App.Models.PageStateModel.showView(App.Views.ExamplePageView);
             App.Models.PageStateMenuModel.selectMenuItem(7, "#menu", "a", ".menu-item-");
+        },
+        getVideo: function(id){
+            console.log('route: video '+ id );
+            App.Models.PageStateModel.showView(App.Views.VideoPageView);
+            App.Models.PageStateMenuModel.selectMenuItem(8, "#menu", "a", ".menu-item-");
+
+            // selects a menu item
+            App.Models.VideoPanelStateMenuModel.selectMenuItem(id, "#video-page .submenu-wrapper", "a", ".menu-item-");
+            
+            // defines which panel to display 
+            App.Models.VideoPanelsStateModel.showView(App.Views["VideoPanelView"+id]);
         }
 
 
