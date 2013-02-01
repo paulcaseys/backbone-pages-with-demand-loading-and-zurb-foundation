@@ -14,7 +14,8 @@ define([
   // required libraries
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
+  'tweenlite'
 
   // required collections
   //'App.Collections.HelloWorldCollection'
@@ -63,7 +64,8 @@ define([
 	    	this.addEventListeners();	
 
 	    	// basic way to display element
-	    	$(this.el).show();  	
+	    	$(this.el).show(); 
+	    	TweenLite.from($("#example-page h1, #example-page p"), 1.5, {css:{alpha:0}, ease:Power2.easeOut}); 	
 	    },
 
     	// removes all eventlisteners

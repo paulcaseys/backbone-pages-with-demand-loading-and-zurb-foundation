@@ -28,7 +28,10 @@ define([
   // loads jquery easing (for better animations)
   'jquery.easing',
   'foundationtopbar',
-  'foundationapp'
+  'foundationapp',
+
+  // tweenlite
+  'tweenlite'
 
 
   // required collections
@@ -84,10 +87,9 @@ define([
 				var targetValue = $target.offset().top - scrollOffset;
 				$(scrollElement).stop().animate({
 					'scrollTop': targetValue
-				}, 1000, 'easeOutCirc', function() {
+				}, 600, 'easeInOutCirc', function() {
 					//$(scrollElement).attr('scrollTop', targetValue);
 				});
-
 			}
 		},
 
@@ -140,6 +142,7 @@ define([
 
 
 			function submenuHandler(){
+				$("#parallax-page .expanded").removeClass('expanded');
 				var targetId = $(this).data('clickvalue');
 				App.Views.ParallaxPageView.scrollTo(targetId);
 

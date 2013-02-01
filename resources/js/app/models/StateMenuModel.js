@@ -45,7 +45,6 @@ define([
       
       selectMenuItem: function(itemNumber, container, selectionGroup, uiniqueSelectionClassForId){
         
-        console.log(container+" "+itemNumber);
 
         // selects a menu item
         $(container+" .active").removeClass('active');

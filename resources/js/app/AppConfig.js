@@ -77,9 +77,14 @@ requirejs.config({
 		'cosmosimageloader': 	'resources/js/libs/cosmos/cosmos-image-loader.1.01',
 		
 		// foundation
-        'foundation': 'resources/js/libs/foundation',
-        'foundationtopbar': 'resources/js/libs/foundation/jquery.foundation.topbar',
-        'foundationapp': 'resources/js/libs/foundation/app',
+        'foundation': 			'resources/js/libs/foundation',
+        'foundationtopbar': 	'resources/js/libs/foundation/jquery.foundation.topbar',
+        'foundationapp': 		'resources/js/libs/foundation/app',
+
+		// foundation
+        'tweenlite': 		'resources/js/libs/tweenlite/TweenLite.min',
+        'easepack': 		'resources/js/libs/tweenlite/EasePack.min',
+        'cssplugin': 		'resources/js/libs/tweenlite/CSSPlugin.min',
 		
 		// paths to app initialiser
 		'AppInit': 								'resources/js/app/AppInit',
@@ -148,8 +153,12 @@ requirejs.config({
     	exports: "foundationtopbar"
     },
     'foundationapp': { 
-    	deps: ["jquery"], 
+    	deps: ["jquery", "foundationtopbar"], 
     	exports: "foundationapp"
+    },
+    'tweenlite': { 
+    	deps: ["cssplugin", "easepack"], 
+    	exports: "tweenlite"
     }
   },
 	
