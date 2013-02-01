@@ -87,9 +87,9 @@ define([
 			// vid 3
       		var videoSettingsObj3 = {};
       		videoSettingsObj3.src = [
-			        { type: "video/mp4", src: "resources/videos/nokia_vid_01.mp4" },
-			        { type: "video/webm", src: "resources/videos/nokia_vid_01.webm" },
-			        { type: "video/ogg", src: "resources/videos/nokia_vid_01.ogv" }
+			        { type: "video/mp4", src: "resources/videos/oceans-clip.mp4" },
+			        { type: "video/webm", src: "resources/videos/oceans-clip.webm" },
+			        { type: "video/ogg", src: "resources/videos/oceans-clip.ogv" }
 			        ];
 			videoSettingsObj3.poster = "http://video-js.zencoder.com/oceans-clip.png";
 			videoSettingsObj3.autoplay = false;
