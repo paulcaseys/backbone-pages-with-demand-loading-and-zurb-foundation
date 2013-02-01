@@ -49,7 +49,7 @@ define([
           this.touch = 'ontouchstart' in document.documentElement;
 
           // detects the type of events to bind
-          this.eventType = this.touch ? 'touchstart' : 'click';
+          this.eventType = this.touch ? 'touchend' : 'click';
 
           // defines a null object to bind to events
           this.eventObj = new Object();

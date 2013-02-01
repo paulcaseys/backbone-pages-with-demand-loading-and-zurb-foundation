@@ -135,19 +135,23 @@ define([
 
 	    	
 	    	// submenu clicking
-			$("#parallax-page .submenu-wrapper a").on(App.Models.ConfigModel.eventType, App.Models.ConfigModel.eventObj, submenuHandler);
+			$("#parallax-page .submenu-wrapper a").on("click", App.Models.ConfigModel.eventObj, submenuHandler);
 			
 			// clears the selected items
 			App.Models.ParallaxPageStateMenuModel.selectMenuItem('null', "#parallax-page .submenu-wrapper", "a", ".menu-item-");
 
 
 			function submenuHandler(){
-				$("#parallax-page .expanded").removeClass('expanded');
-				var targetId = $(this).data('clickvalue');
-				App.Views.ParallaxPageView.scrollTo(targetId);
 
-				// updates the uri hash, but does not route
-				App.Router.navigate("/parallax/"+targetId, { trigger: false });
+				if($(this).data('clickvalue')){
+					var targetId = $(this).data('clickvalue');
+					App.Views.ParallaxPageView.scrollTo(targetId);
+
+					// updates the uri hash, but does not route
+					App.Router.navigate("/parallax/"+targetId, { trigger: false });
+				}				
+
+				$("#parallax-page .expanded").removeClass('expanded');
 			}
 			
 
