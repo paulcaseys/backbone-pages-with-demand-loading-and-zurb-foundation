@@ -223,9 +223,16 @@ define([
 		    	// SUBMENU WAYPOINT
 		    	// determines the subenu stickiness
 				$('#parallax-page .submenu-wrapper').waypoint(function(event, direction) {
-					console.log(direction);
-					$('#parallax-page .submenu-wrapper').toggleClass('sticky', direction === "down");
-					$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
+					
+					// fixes browser resize bug
+					if(direction == "up" && $(document).scrollTop() < $('#parallax-page .submenu-placeholder').position().top+30){
+						$(this).toggleClass('sticky', direction === "down");
+						$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
+					}
+					if(direction == "down"){
+						$(this).toggleClass('sticky', direction === "down");
+						$("#parallax-page .submenu-placeholder").toggleClass('sticky', direction === "down");
+					}					
 					event.stopPropagation();
 				});
 
