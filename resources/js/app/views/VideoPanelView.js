@@ -136,7 +136,7 @@ define([
 	    	}
 
 	    	// Get the parent element's actual width
-	    	var width = $("#video-panel").parent().width();
+	    	var width = $("#video-panel").width();
 
 	    	me.myPlayer = _V_(videoElement);
 
@@ -155,33 +155,6 @@ define([
 	    		$(".vjs-big-play-button").show();
 	    	}
 	    	
-	    	/*
-	    	if($("#video-player").length){
-	    		//_V_("video-element").destroy();
-	    		
-			  // get the videojs player with id of "video_1"
-			  var player = _V_("video-player");      
-
-			  // for html5 - clear out the src which solves a browser memory leak
-			  //  this workaround was found here: http://stackoverflow.com/questions/5170398/ios-safari-memory-leak-when-loading-unloading-html5-video                                         
-			  if(player.techName == "html5"){        
-			    player.tag.src = "";                 
-			    player.tech.removeTriggers();        
-			    player.load();                       
-			  }                                        
-			                                     
-			  // destroy the parts of the player which are specific to html5 or flash
-			  player.tech.destroy();
-
-			  // destroy the player                 
-			  player.destroy();                      
- 
-				console.log($("#video-player"))   
-			  // remove the entire player from the dom
-			  
-				$("#video-player").remove();
-			}
-			*/
 	    },
 	    
 

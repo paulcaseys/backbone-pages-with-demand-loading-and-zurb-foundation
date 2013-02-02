@@ -51,7 +51,7 @@
 // Media Queries Overrides
 // @import "foundation/components/modules/mqueries";
 
-
+@import "compass/css3/border-radius";
 
 
 html,
@@ -60,122 +60,6 @@ body {
 	padding: 0;	
 }
 
-
-
-
-
-
-body {
-
-}
-
-#menu {
-  background: #444;
-  height: 30px; color: #fff; text-align: right;
-}
-#menu ul {
-  list-style: none;
-  margin: 0; padding: 0;
-}
-#menu ul li {
-  float: left;
-  margin-left: 10px;
-}
-#menu ul li a {
-  color: #fff;
-  line-height: 30px;
-  text-decoration: none;
-}
-#menu ul li a:hover {
-  color: #ccc;
-}
-#menu ul li a.active {
-  color: #aaa;
-}
-
-
-
-
-
-.submenu-wrapper li a {
-	cursor: pointer;
-}
-
-
-.submenu-wrapper {
-	background: #aaa;
-	position: relative;
-}
-
-.submenu-wrapper.sticky {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 100% !important;
-}
-
-.submenu.sticky {
-	width: 100% !important;
-}
-.submenu-placeholder {
-	height: 0px;
-}
-
-.submenu-placeholder.sticky  {
-	height: 45px;
-}
-
-.submenu ul li a.active {
-  color: #fff;
-}
-
-
-.top-bar {
-	margin: 0px !important;
-}
-.top-bar .name {
-	width: 0px;
-}
-
-.top-bar .padded-cta { padding: 0px 13px 0px; }
-
-
-
-#gallery-items-target {
-  
-}
-#gallery-items-target img {
-	border: 0;
-}
-#gallery-items-target .image-target-image-container {
-  width: 100%;
-  height: 200px;
-}
-
-#gallery-items-target ul {
-  list-style: none;
-  margin: 0; padding: 0;
-}
-#gallery-items-target .columns {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-#gallery-items-target ul li a {
-  color: #999999;
-  line-height: 30px;
-  text-decoration: none;
-  width: 220px;
-  height: 180px;
-  display: block;
-
-}
-#gallery-items-target ul li a:hover {
-  color: #ccc;
-}
-#gallery-items-target ul li a.active {
-  color: #dddddd;
-}
-/**/
 
 .main-wrapper {	
 	display: none;
@@ -189,25 +73,92 @@ body {
 }
 
 
+// menu at top of page
+#menu {  background: #444;  height: 30px; color: #fff; text-align: right;}
+#menu ul {  list-style: none;  margin: 0; padding: 0;}
+#menu ul li {  float: left;  margin-left: 10px;}
+#menu ul li a {  color: #fff;  line-height: 30px;  text-decoration: none;}
+#menu ul li a:hover {  color: #ccc;}
+#menu ul li a.active {  color: #aaa;}
 
 
-#help-panel-1, #help-panel-2, #help-panel-3, #video-panel-1, #video-panel-2, #video-panel-3  {
-	display: none;
-	background-color: #ffffff;
-	padding: 10px;
-	margin-bottom: 10px;
-	width: 100%;
+// submenu on parrallax page
+.submenu-wrapper li a {	cursor: pointer;}
+.submenu-wrapper {	background: #aaa;	position: relative;}
+.submenu-wrapper.sticky {	position: fixed;	top: 0px;	left: 0px;	width: 100% !important;}
+.submenu-placeholder {	height: 0px;}
+.submenu-placeholder.sticky  {	height: 45px;}
+.top-bar {	margin: 0px !important;}
+.top-bar .name {	width: 0px;}
+.top-bar .padded-cta { padding: 0px 13px 0px; }
+
+
+// gallery page
+#gallery-items-target img {	border: 0;}
+#gallery-items-target .columns {  margin-top: 20px;  margin-bottom: 20px;}
+
+
+// help and video page
+#help-panel-1, 
+#help-panel-2, 
+#help-panel-3, 
+#video-panel {	display: none;	background-color: #ffffff;	padding: 10px;	margin-bottom: 10px;	width: 100%;}
+
+
+// footer
+#credits {	margin: 30px auto;	color: #999;	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;	text-align: center;}
+
+
+// overriding default values
+// main button
+.button {background-color:#246; border:0;}
+.button:hover {background-color:#71F;}
+
+
+
+
+
+
+
+/* videojs */
+
+// overriding videojs player button
+.vjs-big-play-button {
+	width: 90px !important;
+	margin-left: -45px !important;
+	height: 90px !important;
+	margin-top: -45px !important;
+
+	border: solid 1px #222 !important;
+
+	background-color: #2c2c2c !important; 
+	background-image: none !important;
+	background-image: none !important;
+	background-image: none !important;
+	background-image: none !important;
+	background-image: none !important;
+	background-image: none !important;
+	background-repeat: no-repeat !important;
+	filter: none !important;
+
+	-moz-box-shadow: 0px 0px 0px #888 !important;
+	-webkit-box-shadow: 0px 0px 0px #888 !important;
+	box-shadow: 0px 0px 0px #888 !important;
+
+	-webkit-border-radius: 4px 4px !important;
+	-moz-border-radius: 4px / 4px !important;
+	-khtml-border-radius: 4px / 4px !important;
+	border-radius: 4px / 4px !important;
+}
+.vjs-big-play-button:hover {
+	background-color: #111 !important;
 }
 
 
 
-#credits {
-	margin: 30px auto;
-	color: #999;
-	text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
-	text-align: center;
-}
 
-#credits a {
-	color: #888;
-}
+
+
+
+
+
