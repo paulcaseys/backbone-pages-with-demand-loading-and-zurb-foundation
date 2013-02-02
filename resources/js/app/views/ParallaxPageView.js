@@ -132,7 +132,14 @@ define([
     	// adds eventlisteners
 	    addEventListeners: function () { 
 	    	// adds an example event listener
+	    	
+	    	var me = this;
 
+	    	// submenu clicking
+			$("#parallax-page .signup").on("click", App.Models.ConfigModel.eventObj, signupHandler);
+			function signupHandler(){
+				me.scrollTo("signup");
+			}
 	    	
 	    	// submenu clicking
 			$("#parallax-page .submenu-wrapper a").on("click", App.Models.ConfigModel.eventObj, submenuHandler);
