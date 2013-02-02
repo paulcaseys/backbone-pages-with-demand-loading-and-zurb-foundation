@@ -165,3 +165,12 @@ copy the following to display a visual debug panel to the page (for old browsers
 You need to run Chrome with the `--disable-web-security` argument to stop it blocking cross-origin requests. On a Mac, run:
 
     open -a 'Google Chrome' --args --disable-web-security
+
+
+# Installing the Compass Gem
+
+To create your first project using our Compass extension, you'll need to have the zurb-foundation gem installed. This will install Foundation and all necessary dependencies. Here's the command that will do this for you:
+
+    sudo gem install zurb-foundation
+
+
