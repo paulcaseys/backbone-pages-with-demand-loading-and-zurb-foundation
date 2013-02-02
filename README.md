@@ -81,7 +81,7 @@ First I create the StateMenuModel
 Then I can control the state in the Router.js
 
         // selects a menu item
-        App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#submenu", "a", ".menu-item-");
+        App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#submenu-wrapper", "a", ".menu-item-");
 
 To clear all active states: call an itemNumber that does not exist, eg:
         
@@ -147,7 +147,7 @@ eventType example:
 the `eventType` is automatically configured in the `ConfigModel` (the eventType depends on the device `touchstart` : `click`)
 
         // submenu clicking
-      $("#parallax-page #submenu a").on(App.Models.ConfigModel.eventType, App.Models.ConfigModel.eventObj, submenuHandler);
+      $("#parallax-page #submenu-wrapper a").on(App.Models.ConfigModel.eventType, App.Models.ConfigModel.eventObj, submenuHandler);
 
 
 old browser debugging example: 
@@ -158,6 +158,18 @@ copy the following to display a visual debug panel to the page (for old browsers
           App.Models.ConfigModel.debug.append('- line two <br>');
           App.Models.ConfigModel.debug.append('- another line <br>');
 
+
+# Video-js
+
+Incorparated into this backbone boilerplate is Video.js. Video.js is a JavaScript and library that creates a HTML5 video player (with a light-weight flash-fallback for older browsers).
+
+There are `videoSettingsObj` objects in the VideoPageView file, which defines the video paths and poster images.
+
+Video-js overview
+http://videojs.com/
+
+Video-js javascript API details
+https://github.com/zencoder/video-js/blob/master/docs/api.md 
 
 
 # Previewing the app
