@@ -74,25 +74,26 @@ define([
 
 		    var videoElement = 'video-player';
 
-	    	if($(me.videoSettingsObj.parentElement+" #video-player").length == 0){
+	    	if(!$(me.videoSettingsObj.parentElement+" #video-player").length){
 
 	    		// VIDEO PLAYER SET UP THE FIRST TIME
 	    		
 	    		_V_.options.flash.swf = "resources/js/libs/video-js/video-js.swf";
 	    		$(me.videoSettingsObj.parentElement+" #video-panel").html(
 				    '<video id="video-player" class="video-js vjs-default-skin" controls preload="none" data-setup="{}" poster="'+me.videoSettingsObj.poster+'" >' +
-				    '</video>'
-				    );
+				    '</video>');
 
-	    		$(me.videoSettingsObj.parentElement+" #video-panel").hide();
-
+	    		if (!$('html').is('.lt-ie9')) {
+		    		$(me.videoSettingsObj.parentElement+" #video-panel").hide();
+		    	}
 			    _V_(videoElement).ready(function(){
 
 			    	me.myPlayer = this;
 
 			    	me.myPlayer.src(me.videoSettingsObj.src);
 
-				    setTimeout(function() {me.resizeVideoJS() }, 500); 
+				    setTimeout(function() {me.resizeVideoJS(); }, 500); 
+
 				    window.onresize = me.resizeVideoJS; // Call the function on resize
 
 			  	});
@@ -107,7 +108,7 @@ define([
 
 		    	me.myPlayer.src(me.videoSettingsObj.src);
 				
-				setTimeout(function() { me.resizeVideoJS() }, 500); 
+				setTimeout(function() { me.resizeVideoJS(); }, 500); 
 
 		    	// change poster
 		    	$(me.videoSettingsObj.parentElement+' #'+videoElement+' .vjs-poster').attr("src", me.videoSettingsObj.poster);
