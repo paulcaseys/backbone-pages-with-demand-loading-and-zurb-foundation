@@ -86,8 +86,8 @@ body {
 .submenu-wrapper li a {	cursor: pointer;}
 .submenu-wrapper {	background: #aaa;	position: relative;}
 .submenu-wrapper.sticky {	position: fixed;	top: 0px;	left: 0px;	width: 100% !important;}
-.submenu-placeholder {	height: 0px;}
-.submenu-placeholder.sticky  {	height: 45px;}
+.submenu-placeholder {	height: 0px; width:100%; display:block;}
+.submenu-placeholder.sticky  {	height: 45px; width:100%; }
 .top-bar {	margin: 0px !important;}
 .top-bar .name {	width: 0px;}
 .top-bar .padded-cta { padding: 0px 13px 0px; }

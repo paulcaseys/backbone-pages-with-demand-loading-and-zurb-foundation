@@ -156,7 +156,7 @@ define([
 
 	    	if($('#video-player').length){
 	    		_V_('video-player').pause();
-	    		if (App.Models.ConfigModel.touch === true) {
+	    		if (App.Models.ConfigModel.touch !== true) {
 		    		$(".vjs-big-play-button").show();
 		    	}
 	    	}

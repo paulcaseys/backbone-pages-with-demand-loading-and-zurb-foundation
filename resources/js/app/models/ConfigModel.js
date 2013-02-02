@@ -57,8 +57,8 @@ define([
           this.bodyId = this.body.attr('id');
           this.imgRatioNum = 1600/950;
           this.videoRatioNum = 640/360;
-          this.headerOffset = 30;
-          this.scrollToOffset = 200;
+          this.headerOffset = 45;
+          this.scrollToOffset = 100;
 
           // defines the window dimensions
           this.defineWindowDimensions();

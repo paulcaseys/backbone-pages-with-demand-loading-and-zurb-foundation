@@ -88,7 +88,7 @@ define([
 				$(scrollElement).stop().animate({
 					'scrollTop': targetValue
 				}, 600, 'easeInOutCirc', function() {
-					//$(scrollElement).attr('scrollTop', targetValue);
+					//$(scrollElement).css('scrollTop', targetValue);
 				});
 			}
 		},
