@@ -185,4 +185,5 @@ To create your first project using our Compass extension, you'll need to have th
 
     sudo gem install zurb-foundation
 
+This framework does not support IE7. If IE7 support is important for your users / customers, you can use Foundation 2.2.1, which supports IE7. http://foundation.zurb.com/files/foundation-download-2.2.1.zip
 
