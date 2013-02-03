@@ -31,12 +31,13 @@ define([
   'App.Views.RaphaelPageView',
   'App.Views.ParallaxPageView',
   'App.Views.ExamplePageView',
-  'App.Views.VideoPageView'
+  'App.Views.VideoPageView',
+  'App.Views.SidemenuPageView'
 
 
 
 // require js: defines instances
-], function($, _, Backbone, Router, ConfigModel, StateModel, StateMenuModel, HomePageView, GalleryPageView, HelpPageView, RaphaelPageView, ParallaxPageView, ExamplePageView, VideoPageView){
+], function($, _, Backbone, Router, ConfigModel, StateModel, StateMenuModel, HomePageView, GalleryPageView, HelpPageView, RaphaelPageView, ParallaxPageView, ExamplePageView, VideoPageView, SidemenuPageView){
 
 
     
@@ -61,6 +62,7 @@ define([
       App.Views.ParallaxPageView = new ParallaxPageView;
       App.Views.ExamplePageView = new ExamplePageView;
       App.Views.VideoPageView = new VideoPageView;
+      App.Views.SidemenuPageView = new SidemenuPageView;
 
       // initialises the router
       Router.initialize();
@@ -73,6 +75,7 @@ define([
       App.Views.ParallaxPageView.trigger("testCall");
       App.Views.ExamplePageView.trigger("testCall");
       App.Views.VideoPageView.trigger("testCall");
+      App.Views.SidemenuPageView.trigger("testCall");
 
       // hides the loading div (if it exists)
       if ($("#loading-page").length > 0){

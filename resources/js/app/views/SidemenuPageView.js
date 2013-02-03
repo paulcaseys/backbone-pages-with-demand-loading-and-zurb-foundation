@@ -1,6 +1,6 @@
 
 /**
- * Filename: js/app/views/ParallaxPageView
+ * Filename: js/app/views/SidemenuPageView
  *
  * initialises the view
  * 
@@ -44,11 +44,11 @@ define([
 ], function($, _, Backbone, StateMenuModel){
 
 
-	var ParallaxPageView = Backbone.View.extend({
+	var SidemenuPageView = Backbone.View.extend({
 
 		
 	    // binds view to the existing skeleton of the App already present in the HTML.
-	    el: $("#parallax-page"),
+	    el: $("#sidemenu-page"),
 
 	    // at initialization we bind to the relevant events
 	    initialize: function() {
@@ -60,7 +60,7 @@ define([
 	    	this.on('testCall', this.testMethod, this);
 
       		// initialises the state controller for the menu
-      		App.Models.ParallaxPageStateMenuModel = new StateMenuModel;
+      		App.Models.SidemenuPageStateMenuModel = new StateMenuModel;
 
 		
 	    },
@@ -68,7 +68,7 @@ define([
     	
     	// method for the eventlistener
 	    testMethod: function (e) {
-	       console.log('ParallaxPageView testMethod');
+	       console.log('SidemenuPageView testMethod');
 	    },
 	    
 
@@ -136,31 +136,33 @@ define([
 	    	var me = this;
 
 	    	// submenu clicking
-			$("#parallax-page .signup").on("click", App.Models.ConfigModel.eventObj, signupHandler);
+			$("#sidemenu-page .signup").on("click", App.Models.ConfigModel.eventObj, signupHandler);
 			function signupHandler(){
 				me.scrollTo("signup");
 			}
 	    	
 	    	// submenu clicking
-			$("#parallax-page .submenu-wrapper a").on("click", App.Models.ConfigModel.eventObj, submenuHandler);
+			$("#sidemenu-page .sidemenu-wrapper a").on("click", App.Models.ConfigModel.eventObj, submenuHandler);
 			
 			// clears the selected items
-			App.Models.ParallaxPageStateMenuModel.selectMenuItem('null', "#parallax-page .submenu-wrapper", "a", ".menu-item-");
+			//App.Models.SidemenuPageStateMenuModel.selectMenuItem('null', "#sidemenu-page .submenu-wrapper", "a", ".menu-item-");
 
 
 			function submenuHandler(){
 
 				if($(this).data('clickvalue')){
 					var targetId = $(this).data('clickvalue');
-					App.Views.ParallaxPageView.scrollTo(targetId);
+					App.Views.SidemenuPageView.scrollTo(targetId);
 
 					// updates the uri hash, but does not route
-					App.Router.navigate("/parallax/"+targetId, { trigger: false });
+					App.Router.navigate("/sidemenu/"+targetId, { trigger: false });
 				}				
 
-				$("#parallax-page .expanded").removeClass('expanded');
+				$("#sidemenu-page .expanded").removeClass('expanded');
 			}
-			
+
+
+			/*
 
 			// checks if the device is a touch screen
 			if (App.Models.ConfigModel.touch === true) {
@@ -275,6 +277,7 @@ define([
 				});
 
 			}
+			*/
 			
 			
 	    },
@@ -294,7 +297,7 @@ define([
 			} else {
 				// IS NOT A TOUCH SCREEN
 	    		$('#parallax-page .waypoint-section').waypoint('destroy');
-	    		$('#parallax-page .waypoint-module').waypoint('destroy');
+	    		$('#parallax-page .submenu-module').waypoint('destroy');
 	    		$('#parallax-page .submenu-wrapper').waypoint('destroy');
 	    	}
 	    }
@@ -305,6 +308,6 @@ define([
 
 
     // require js: defines function/s to be accessed by require js
-    return ParallaxPageView;
+    return SidemenuPageView;
 
 });

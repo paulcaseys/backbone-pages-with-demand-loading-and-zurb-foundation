@@ -34,6 +34,7 @@ define([
             "parallax/:id": "getParallax",
             "example/": "getExample",
             "video/:id": "getVideo",
+            "sidemenu/:id": "getSidemenu",
             "*actions": "defaultRoute" // Backbone will try match the route above first
         },
 
@@ -73,7 +74,7 @@ define([
             App.Models.PageStateMenuModel.selectMenuItem(5, "#menu", "a", ".menu-item-");
         },
         getParallax: function(id){
-            console.log('route: raphael');
+            console.log('route: parrallax');
             App.Models.PageStateModel.showView(App.Views.ParallaxPageView);
             App.Models.PageStateMenuModel.selectMenuItem(6, "#menu", "a", ".menu-item-");
 
@@ -95,6 +96,14 @@ define([
             
             // defines which panel to display 
             App.Models.VideoPanelsStateModel.showView(App.Views["VideoPanelView"+id]);
+        },
+        getSidemenu: function(id){
+            console.log('route: sidemenu');
+            App.Models.PageStateModel.showView(App.Views.SidemenuPageView);
+            App.Models.PageStateMenuModel.selectMenuItem(9, "#menu", "a", ".menu-item-");
+
+            setTimeout(function() { App.Views.SidemenuPageView.scrollTo(id); }, 500);
+
         }
 
 

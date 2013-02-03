@@ -114,7 +114,8 @@ requirejs.config({
 		'App.Views.ParallaxPageView': 		'resources/js/app/views/ParallaxPageView',
 		'App.Views.ExamplePageView': 		'resources/js/app/views/ExamplePageView',
 		'App.Views.VideoPageView': 			'resources/js/app/views/VideoPageView',
-		'App.Views.VideoPanelView': 		'resources/js/app/views/VideoPanelView',
+        'App.Views.VideoPanelView':         'resources/js/app/views/VideoPanelView',
+        'App.Views.SidemenuPageView':       'resources/js/app/views/SidemenuPageView',
 
 		// paths to collections
 		//'App.Collections.ExampleCollection': 	'resources/js/app/collections/ExampleCollection',
