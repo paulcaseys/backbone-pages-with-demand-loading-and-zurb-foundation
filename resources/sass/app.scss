@@ -74,7 +74,7 @@ body {
 
 
 // menu at top of page
-#menu {  background: #444;  height: 30px; color: #fff; text-align: right;}
+#menu {  background: #444;  height: 30px; color: #fff; text-align: right;	overflow: hidden;}
 #menu ul {  list-style: none;  margin: 0; padding: 0;}
 #menu ul li {  float: left;  margin-left: 10px;}
 #menu ul li a {  color: #fff;  line-height: 30px;  text-decoration: none;}
@@ -91,6 +91,12 @@ body {
 .top-bar {	margin: 0px !important;}
 .top-bar .name {	width: 0px;}
 .top-bar .padded-cta { padding: 0px 13px 0px; }
+.item-1 {	width: 100px;	height: 100px; background-color: #ff0; float: left; margin-right: 20px;}
+.item-1 .inner-item-1 {	width: 0%;	height: 0%; background-color: #0f0; float: left; margin-right: 20px;}
+.item-2 {	width: 100px;	height: 100px; background-color: #ff0; float: left; margin-right: 20px;}
+.item-2 .inner-item-1 {	visibility: hidden;	width: 100%;	height: 100%; background-color: #0f0; float: left; margin-right: 20px;}
+
+
 
 
 // gallery page

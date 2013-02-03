@@ -180,7 +180,7 @@ define([
 		    	$.waypoints.settings.scrollThrottle = 30;
 
 		    	// SECTION WAYPOINT
-		    	// determines which section the waypoint	
+		    	// determines which section the waypoint is at	
 		    	$('#parallax-page .waypoint-section').waypoint(function(e, direction) {
 		    		var $active = $(this);
 
@@ -209,6 +209,37 @@ define([
 				   onlyOnScroll: true
 				});
 
+		    	// MODEUL WAYPOINTS
+		    	// determines which modules to display	
+				$('#parallax-page .waypoint-module').waypoint(function(e, direction) {
+					//console.log($(this).hasClass('item-1'));
+
+		    		// item
+					if($(this).hasClass('item-1')){
+						if (direction === 'down') {
+							TweenLite.to($("#parallax-page .item-1 .inner-item-1"), 1.5, {css:{"width":"100%",	"height":"100%"}, 	ease:Power4.easeInOut});
+						} else {
+							TweenLite.to($("#parallax-page .item-1 .inner-item-1"), 1.5, {css:{"width":"0%",	"height":"0%"}, 	ease:Power4.easeInOut});
+						}												
+					}
+
+		    		// item
+					if($(this).hasClass('item-2')){
+						if (direction === 'down') {
+							TweenLite.to($("#parallax-page .item-2 .inner-item-1"), 1.5, {css:{autoAlpha:1}, 	ease:Power4.easeInOut});
+						} else {
+							TweenLite.to($("#parallax-page .item-2 .inner-item-1"), 1.5, {css:{autoAlpha:0}, 	ease:Power4.easeInOut});
+						}												
+					}
+
+				   
+				}, {
+				   offset: "75%", 
+				   onlyOnScroll: true
+				});
+
+
+				
 				// anchor smooth scrolling
 				var scrollElement = 'html, body';
 				$('html, body').each(function () {
