@@ -87,7 +87,7 @@ define([
 		    		$(me.videoSettingsObj.parentElement+" #video-panel").hide();
 		    	}
 			    _V_(videoElement).ready(function(){
-
+			    	
 			    	me.myPlayer = this;
 
 			    	me.myPlayer.src(me.videoSettingsObj.src);
@@ -96,9 +96,10 @@ define([
 
 				    window.onresize = me.resizeVideoJS; // Call the function on resize
 
-				    if(me.videoSettingsObj.autoplay) setTimeout(function() {me.myPlayer.play() }, 500);
-
+				    if(me.videoSettingsObj.autoplay) setTimeout(function() {me.myPlayer.play(); }, 500);
+					
 			  	});
+
 
 	    	} else {
 
@@ -114,9 +115,12 @@ define([
 
 		    	// change poster
 		    	$(me.videoSettingsObj.parentElement+' #'+videoElement+' .vjs-poster').attr("src", me.videoSettingsObj.poster);
-				me.myPlayer.posterImage.show(); 
+				//if(!me.myPlayer.posterImage){
+				//} else {
+				//	me.myPlayer.posterImage.show(); 
+				//}				
 
-				if(me.videoSettingsObj.autoplay) setTimeout(function() {me.myPlayer.play() }, 500);
+				if(me.videoSettingsObj.autoplay) setTimeout(function() {me.myPlayer.play(); }, 500);
 
 
 	    	}
