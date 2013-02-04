@@ -115,10 +115,9 @@ define([
 
 		    	// change poster
 		    	$(me.videoSettingsObj.parentElement+' #'+videoElement+' .vjs-poster').attr("src", me.videoSettingsObj.poster);
-				//if(!me.myPlayer.posterImage){
-				//} else {
-				//	me.myPlayer.posterImage.show(); 
-				//}				
+				
+				me.myPlayer.posterImage.show(); 
+						
 
 				if(me.videoSettingsObj.autoplay) setTimeout(function() {me.myPlayer.play(); }, 500);
 
