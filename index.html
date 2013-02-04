@@ -591,20 +591,11 @@
           <h2>forms-getting-started</h2>
           <p class="fixie"></p>
           <p class="fixie"></p>
-          <pre>
-&lt;div class=&quot;alert-box&quot;&gt;
-  This is a standard alert (div.alert-box).
-  &lt;a href=&quot;&quot; class=&quot;close&quot;&gt;&amp;times;&lt;/a&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;alert-box success&quot;&gt;
-  This is a success alert (div.alert-box.success).
-  &lt;a href=&quot;&quot; class=&quot;close&quot;&gt;&amp;times;&lt;/a&gt;
-&lt;/div&gt;           
-          </pre>
+          <script type="text/javascript" src="https://snipt.net/embed/9a6dc866bd1aa508f8be333b9446789e/"></script>
           <p class="fixie"></p>
           <p class="fixie"></p>
           <p class="fixie"></p>
+          <script src="https://gist.github.com/4704873.js"></script>
           <p class="fixie"></p>
         </div>
 
@@ -613,7 +604,18 @@
           <p class="fixie"></p>
           <p class="fixie"></p>
           <p class="fixie"></p>
-          <p class="fixie"></p>
+
+<div class="code-chunk">
+<pre><span class="comment">/* Launching joyride when to page is loaded */</span>
+<span class="element">&lt;script</span><span class="element">&gt;</span>
+  $(<span class="element">window</span>).load(<span class="element">function</span>() {
+    $(<span class="element">"#chooseID"</span>).<span class="attr">joyride</span>({
+      <span class="comment">/* Options will go here */</span>
+    });
+  });
+<span class="element">&lt;/script&gt;</span>
+</pre>
+</div>
           <p class="fixie"></p>
           <p class="fixie"></p>
         </div>
