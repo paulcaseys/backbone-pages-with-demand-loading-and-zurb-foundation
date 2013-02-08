@@ -591,15 +591,10 @@
           <h2>forms-getting-started</h2>
           <p class="fixie"></p>
           <p class="fixie"></p>
-          <script type="text/javascript" src="https://snipt.net/embed/9a6dc866bd1aa508f8be333b9446789e/"></script>
+          <pre><code class="language-css">p { color: red }</code></pre>
           <p class="fixie"></p>
           <p class="fixie"></p>
           <p class="fixie"></p>
-
-          <div class="code-chunk">
-            <script src="https://gist.github.com/4704873.js"></script>
-          </div>     
-               
           <p class="fixie"></p>
         </div>
 
@@ -608,18 +603,6 @@
           <p class="fixie"></p>
           <p class="fixie"></p>
           <p class="fixie"></p>
-
-<div class="code-chunk">
-<pre><span class="comment">/* Launching joyride when to page is loaded */</span>
-<span class="element">&lt;script</span><span class="element">&gt;</span>
-  $(<span class="element">window</span>).load(<span class="element">function</span>() {
-    $(<span class="element">"#chooseID"</span>).<span class="attr">joyride</span>({
-      <span class="comment">/* Options will go here */</span>
-    });
-  });
-<span class="element">&lt;/script&gt;</span>
-</pre>
-</div>
           <p class="fixie"></p>
           <p class="fixie"></p>
         </div>
@@ -721,6 +704,9 @@
   <!-- javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+
+  <!-- prism library for code chuncks (cannot load through require.js) -->
+  <script src="resources/js/libs/prism/prism.js"></script>
 
   <!-- raphael library (cannot load through require.js) -->
   <script src="resources/js/libs/raphael/raphael.min.js" type="text/javascript" charset="utf-8"></script>

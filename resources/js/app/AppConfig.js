@@ -88,7 +88,9 @@ requirejs.config({
 
         // video-js (html5 video player, with swf fallback for old browsers)
         'videojs':        'resources/js/libs/video-js/video.min',
-		
+        
+        // video-js (html5 video player, with swf fallback for old browsers)
+        'prism':        'resources/js/libs/prism/prism',        
 
 		// paths to app initialiser
 		'AppInit': 								'resources/js/app/AppInit',
