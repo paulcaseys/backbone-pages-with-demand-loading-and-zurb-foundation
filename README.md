@@ -202,22 +202,22 @@ http://validator.w3.org/check?uri=http%3A%2F%2Fpaulcasey.net%2Fclients%2Fnine%2F
 
 Meta tags containing X-UA-Compatible do not pass strict validation. `index.html` contains the following line
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 This meta tag can be removed and replaced with the following code in you `.htaccess` file.
 
-  <FilesMatch "\.(htm|html|php)$">
-      <IfModule mod_headers.c>
-          BrowserMatch MSIE ie
-          Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
-      </IfModule>
-  </FilesMatch>
+    <FilesMatch "\.(htm|html|php)$">
+        <IfModule mod_headers.c>
+            BrowserMatch MSIE ie
+            Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+        </IfModule>
+    </FilesMatch>
 
 depending on your hosting solution, you may also require the following MIME types
 
-  AddType application/vnd.ms-fontobject .eot
-  AddType font/ttf .ttf
-  AddType font/otf .otf
-  AddType application/x-font-woff .woff
+    AddType application/vnd.ms-fontobject .eot
+    AddType font/ttf .ttf
+    AddType font/otf .otf
+    AddType application/x-font-woff .woff
 
 
