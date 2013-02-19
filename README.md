@@ -104,7 +104,7 @@ details about each parameter:
 
 `resources/js/app/AppConfig.js` is where to define the paths to services
 
-`resources/js/app/models/` contains models. Each backbone model should contain default valuse. 
+`resources/js/app/models/` contains models. Each backbone model should contain default values. 
 
 Then in your view can demand a service request. 
 
