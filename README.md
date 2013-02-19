@@ -185,5 +185,39 @@ To create your first project using our Compass extension, you'll need to have th
 
     sudo gem install zurb-foundation
 
+
+# Browser compatibility
+
 This framework supports IE8 and above. If IE7 support is important for your users / customers, you can use Foundation 2.2.1, which supports IE7. http://foundation.zurb.com/files/foundation-download-2.2.1.zip
+
+
+# Validation
+
+The document was successfully checked as HTML5. This means that the resource in question identified itself as "HTML5" and that we successfully performed a formal validation of it.
+
+http://validator.w3.org/check?uri=http%3A%2F%2Fpaulcasey.net%2Fclients%2Fnine%2Fnokia%2Fhtml5%2F
+
+
+# .htaccess file   
+
+Meta tags containing X-UA-Compatible do not pass strict validation. `index.html` contains the following line
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+This meta tag can be removed and replaced with the following code in you `.htaccess` file.
+
+  <FilesMatch "\.(htm|html|php)$">
+      <IfModule mod_headers.c>
+          BrowserMatch MSIE ie
+          Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+      </IfModule>
+  </FilesMatch>
+
+depending on your hosting solution, you may also require the following mime types
+
+  AddType application/vnd.ms-fontobject .eot
+  AddType font/ttf .ttf
+  AddType font/otf .otf
+  AddType application/x-font-woff .woff
+
 
