@@ -213,7 +213,7 @@ This meta tag can be removed and replaced with the following code in you `.htacc
       </IfModule>
   </FilesMatch>
 
-depending on your hosting solution, you may also require the following mime types
+depending on your hosting solution, you may also require the following MIME types
 
   AddType application/vnd.ms-fontobject .eot
   AddType font/ttf .ttf
