@@ -3,9 +3,9 @@
  * Filename: js/app/views/DatavisPageView
  *
  * initialises the view
- * 
+ *
  */
-// 
+//
 
 
 // require js: defines the required js libraries and app files
@@ -20,54 +20,54 @@ define([
   // required collections
   //'App.Collections.HelloWorldCollection'
 
-  // required models  
+  // required models
   //'App.Models.HelloWorldModel'
 
 // require js: defines instances
 ], function($, _, Backbone){
 
 
-	var RaphaelPageView = Backbone.View.extend({
-
-		
-	    // binds view to the existing skeleton of the App already present in the HTML.
-	    el: $("#raphael-page"),
-
-	    // at initialization we bind to the relevant events
-	    initialize: function() {
-	    	
-	    	// hides the element until App.Models.StateModel.showView(WheteverView) calls the transitionIn() function
-	    	$(this.el).hide(); 
-	    	
-	  		// creates an example event listener
-	    	this.on('testCall', this.testMethod, this);
-
-	    },
-
-    	
-    	// method for the eventlistener
-	    testMethod: function (e) {
-	       console.log('RaphaelPageView testMethod');
-	    },
-	    
+    var RaphaelPageView = Backbone.View.extend({
 
 
+        // binds view to the existing skeleton of the App already present in the HTML.
+        el: $("#raphael-page"),
 
-		/*******************
-		 * TRANSITION IN/OUT
-		 * these are called when the view is routed in / out
-		 */
-		
-    	// transitions the view in
-	    transitionIn: function () {	 
-	    	// adds eventlisteners     
-	    	this.addEventListeners();	
+        // at initialization we bind to the relevant events
+        initialize: function() {
 
-	    	// basic way to display element
-	    	$(this.el).show();  	
+            // hides the element until App.Models.StateModel.showView(WheteverView) calls the transitionIn() function
+            $(this.el).hide();
+
+            // creates an example event listener
+            this.on('testCall', this.testMethod, this);
+
+        },
+
+
+        // method for the eventlistener
+        testMethod: function (e) {
+           console.log('RaphaelPageView testMethod');
+        },
+
+
+
+
+        /*******************
+         * TRANSITION IN/OUT
+         * these are called when the view is routed in / out
+         */
+
+        // transitions the view in
+        transitionIn: function () {
+            // adds eventlisteners
+            this.addEventListeners();
+
+            // basic way to display element
+            $(this.el).show();
             //console.log(Raphael);
 
-            
+
              // Grab the data
                 var data = [],
                     axisx = [],
@@ -100,11 +100,11 @@ define([
                     color = $("#chart").css("color");
                     max = Math.round(X / 2) - 1;
                 // r.rect(0, 0, width, height, 5).attr({fill: "#000", stroke: "none"});
-                for (var i = 0, ii = axisx.length; i < ii; i++) {
-                    this.raph.text(leftgutter + X * (i + 0.5), 240, axisx[i]).attr(txt);
+                for (var b = 0, bb = axisx.length; b < bb; b++) {
+                    this.raph.text(leftgutter + X * (b + 0.5), 240, axisx[b]).attr(txt);
                 }
-                for (var i = 0, ii = axisy.length; i < ii; i++) {
-                    this.raph.text(20, Y * (i + 0.5), axisy[i]).attr(txt);
+                for (var c = 0, cc = axisy.length; c < cc; c++) {
+                    this.raph.text(20, Y * (c + 0.5), axisy[c]).attr(txt);
                 }
                 var o = 0;
                 for (var i = 0, ii = axisy.length; i < ii; i++) {
@@ -150,42 +150,42 @@ define([
                 }
 
 
-	    },
+        },
 
-    	// removes all eventlisteners
-	    transitionOut: function () {	       
-	    	// removes eventlisteners    
-	    	this.removeEventListeners();	
+        // removes all eventlisteners
+        transitionOut: function () {
+            // removes eventlisteners
+            this.removeEventListeners();
 
-	    	// basic way to hide element
-	    	$(this.el).hide();  
+            // basic way to hide element
+            $(this.el).hide();
 
             // removes raph when leaving page
             App.Views.RaphaelPageView.raph.clear();
-	    },	    
+        },
 
 
 
-		/*******************
-		 * EVENT LISTENERS
-		 * garbage disposal for unneccesary event listeners
-		 */
-		
-    	// adds eventlisteners
-	    addEventListeners: function () { 
-	    	// adds an example event listener
-	    	//this.on('testCall', this.testMethod, this);
+        /*******************
+         * EVENT LISTENERS
+         * garbage disposal for unneccesary event listeners
+         */
 
-	    },
+        // adds eventlisteners
+        addEventListeners: function () {
+            // adds an example event listener
+            //this.on('testCall', this.testMethod, this);
 
-    	// removes eventlisteners
-	    removeEventListeners: function () {	       
-	    	// removes an event listeners
-	    	//this.off('testCall', this.testMethod, this);
-	    }
-	    
+        },
 
-	});
+        // removes eventlisteners
+        removeEventListeners: function () {
+            // removes an event listeners
+            //this.off('testCall', this.testMethod, this);
+        }
+
+
+    });
 
 
 

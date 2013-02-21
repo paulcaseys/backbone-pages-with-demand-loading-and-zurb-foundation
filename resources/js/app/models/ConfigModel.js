@@ -3,9 +3,9 @@
  * Filename: js/app/models/ConfigModel
  *
  * config model
- * 
+ *
  */
-// 
+//
 
 
 // require js: defines the required js libraries and app files
@@ -52,7 +52,7 @@ define([
           this.eventType = this.touch ? 'touchend' : 'click';
 
           // defines a null object to bind to events
-          this.eventObj = new Object();
+          this.eventObj = {};
 
           this.bodyId = this.body.attr('id');
           this.imgRatioNum = 1600/950;
@@ -68,9 +68,9 @@ define([
 
           // debugging console for IE
           this.debug = $("<div style='padding:10px;background:#FFF;position:fixed;top:0;left:0;color:#000;font-size:12px;z-index:999'>");
-          
+
           /* DEBUGGING CONSOLE for old browsers
-          // copy + paste the details below 
+          // copy + paste the details below
           -----------------------------------
           $('html').append(App.Models.ConfigModel.debug);
           App.Models.ConfigModel.debug.html('- test debug <br>');
@@ -87,11 +87,11 @@ define([
           this.browserRatioNum = this.windowWidth/this.windowHeight;
 
         }
-        
-        
+
+
 
     });
-     
+
 
 
 

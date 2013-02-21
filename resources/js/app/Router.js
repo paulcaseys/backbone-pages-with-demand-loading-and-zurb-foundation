@@ -3,9 +3,9 @@
  * Filename: js/app/router
  *
  * routes uris and logs a history
- * 
+ *
  */
-// 
+//
 
 
 // require js: defines the required js libraries and app files
@@ -57,11 +57,11 @@ define([
 
             // selects a menu item
             App.Models.HelpPanelStateMenuModel.selectMenuItem(id, "#help-page .submenu-wrapper", "a", ".menu-item-");
-            
-            // defines which panel to display 
+
+            // defines which panel to display
             App.Models.HelpPanelsStateModel.showView(App.Views["HelpPanelView"+id]);
 
-            
+
         },
         getDatavis: function(){
             console.log('route: datavis');
@@ -93,8 +93,8 @@ define([
 
             // selects a menu item
             App.Models.VideoPanelStateMenuModel.selectMenuItem(id, "#video-page .submenu-wrapper", "a", ".menu-item-");
-            
-            // defines which panel to display 
+
+            // defines which panel to display
             App.Models.VideoPanelsStateModel.showView(App.Views["VideoPanelView"+id]);
         },
         getSidemenu: function(id){
@@ -111,14 +111,14 @@ define([
 
 
 
-  
-    
+
+
 
 
     var initialize = function(){
 
         // Instantiate the router
-        App.Router = new AppRouter;
+        App.Router = new AppRouter();
 
         // Start Backbone history a necessary step for bookmarkable URL's
         Backbone.history.start();

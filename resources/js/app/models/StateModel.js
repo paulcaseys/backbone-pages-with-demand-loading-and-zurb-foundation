@@ -3,9 +3,9 @@
  * Filename: js/app/models/StateModel
  *
  * manages the views
- * 
+ *
  */
-// 
+//
 
 
 // require js: defines the required js libraries and app files
@@ -22,10 +22,10 @@ define([
     // defines model
     var StateModel = Backbone.Model.extend({
 
-      
+
       showView: function(view){
         // checks if there was a previous view
-        if(this.currentView != undefined){
+        if(this.currentView !== undefined){
             // removes the previous view
             this.currentView.transitionOut();
         }
@@ -36,11 +36,11 @@ define([
         this.currentView.transitionIn();
 
 
-        
+
       }
-      
+
     });
-     
+
 
 
 
