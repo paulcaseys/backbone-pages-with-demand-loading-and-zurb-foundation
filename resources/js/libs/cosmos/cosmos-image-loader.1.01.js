@@ -44,6 +44,8 @@ $(document).ready(function(){
 });
 
 Cosmos.Utils.ImageLoaderWithRescaleSlideShow = function(theTargetElement, theImageArray, theIntervalSpeed, theFadeSpeed, theRescale, theCentre, theElementResizeListener, varObj) {
+	
+	var me = this;
 
 	$(theTargetElement).data("theTargetElement", theTargetElement);
 	$(theTargetElement).data("theImageArray", theImageArray);
@@ -97,12 +99,7 @@ Cosmos.Utils.ImageLoaderWithRescaleSlideShow = function(theTargetElement, theIma
 		if($proper.length > theImageArray.length-1){
 			
 			// ALL LOADED
-			$(theTargetElement).trigger('IMAGE_LOADED');
 			
-			if(varObj.success !== ''){
-				varObj.success($(theTargetElement));
-			}			
-
 			// positions the image
 			Cosmos.Utils.PositionImage(theTargetElement, varObj);
 
@@ -112,7 +109,7 @@ Cosmos.Utils.ImageLoaderWithRescaleSlideShow = function(theTargetElement, theIma
 			if(theImageArray.length > 1){
 				// MULTIPLE IMAGES
 				Cosmos.Utils.PlaySlideshow(theTargetElement, varObj);
-				setInterval(function() { Cosmos.Utils.PlaySlideshow(theTargetElement, varObj); }, theIntervalSpeed+theFadeSpeed);
+				me.slideshowInterval = setInterval(function() { Cosmos.Utils.PlaySlideshow(theTargetElement, varObj); }, theIntervalSpeed+theFadeSpeed);
 
 			} else {
 				// ONE IMAGE
@@ -126,6 +123,14 @@ Cosmos.Utils.ImageLoaderWithRescaleSlideShow = function(theTargetElement, theIma
 					Cosmos.Utils.PositionImage($(theTargetElement).data("theTargetElement"), varObj);
 				});
 			}
+
+			// triggers event listeners
+			$(theTargetElement).trigger('IMAGE_LOADED');
+			
+			if(varObj.success !== ''){
+				varObj.success($(theTargetElement));
+			}			
+
 		}
     });
 
