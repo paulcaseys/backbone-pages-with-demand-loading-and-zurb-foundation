@@ -202,7 +202,7 @@ To compile the javascript, you must have `node`, `uglify.js` and `r.js` installe
 4. install r.js
 `sudo npm install -g requirejs`
 
-More r.js details can be found at: https://github.com/jrburke/r.js/)
+More r.js details can be found at: https://github.com/jrburke/r.js/
 
 If you have not used r.js before, a good resource to learn can be found at:
 http://www.svlada.com/blog/2012/07/02/require-js-optimization-part2/#t0
