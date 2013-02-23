@@ -197,7 +197,7 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
     waitSeconds: 300,
 
     // prevents caching during development (remove data and time for live app)
-    urlArgs: 'ver=5'
+    urlArgs: 'ver=5' + ((new Date()).getTime())
 
     });
 
