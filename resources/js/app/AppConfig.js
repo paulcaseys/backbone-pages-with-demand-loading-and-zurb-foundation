@@ -99,8 +99,11 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
             // video-js (html5 video player, with swf fallback for old browsers)
             'videojs':        'resources/js/libs/video-js/video.min',
 
-            // video-js (html5 video player, with swf fallback for old browsers)
+            // code snippet library
             'prism':        'resources/js/libs/prism/prism',
+
+            // handlebars templating solution, like moustache
+            'handlebars':        'resources/js/libs/handlebars/handlebars',
 
             // paths to app initialiser
             'AppInit':                              'resources/js/app/AppInit',
@@ -140,50 +143,54 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
 
         // dependancies for certain javascript files
         shim: {
-        'underscore': {
-            exports: '_'
-        },
-        'backbone': {
-            deps: ["underscore", "jquery"],
-            exports: "Backbone"
-        },
-        'kendo.console': {
-            deps: ["jquery"]
-        },
-        'waypoints': {
-            deps: ["jquery"]
-        },
-        'modernizr': {
-            deps: ["jquery"]
-        },
-        'jquery.easing': {
-            deps: ["jquery"]
-        },
-        'raphael': {
-            deps: ["jquery"],
-            exports: "raphael"
-        },
-        'cosmosimageloader': {
-            deps: ["jquery"],
-            exports: "cosmosimageloader"
-        },
-        'foundationtopbar': {
-            deps: ["jquery"],
-            exports: "foundationtopbar"
-        },
-        'foundationapp': {
-            deps: ["jquery", "foundationtopbar"],
-            exports: "foundationapp"
-        },
-        'tweenlite': {
-            deps: ["cssplugin", "easepack"],
-            exports: "tweenlite"
-        },
-        'videojs': {
-            deps: ["jquery"],
-            exports: "videojs"
-        }
-      },
+            'underscore': {
+                exports: '_'
+            },
+            'backbone': {
+                deps: ["underscore", "jquery"],
+                exports: "Backbone"
+            },
+            'kendo.console': {
+                deps: ["jquery"]
+            },
+            'waypoints': {
+                deps: ["jquery"]
+            },
+            'modernizr': {
+                deps: ["jquery"]
+            },
+            'jquery.easing': {
+                deps: ["jquery"]
+            },
+            'raphael': {
+                deps: ["jquery"],
+                exports: "raphael"
+            },
+            'cosmosimageloader': {
+                deps: ["jquery"],
+                exports: "cosmosimageloader"
+            },
+            'foundationtopbar': {
+                deps: ["jquery"],
+                exports: "foundationtopbar"
+            },
+            'foundationapp': {
+                deps: ["jquery", "foundationtopbar"],
+                exports: "foundationapp"
+            },
+            'tweenlite': {
+                deps: ["cssplugin", "easepack"],
+                exports: "tweenlite"
+            },
+            'videojs': {
+                deps: ["jquery"],
+                exports: "videojs"
+            },
+            'handlebars': {
+                exports: 'Handlebars'
+            }
+
+    },
 
 
     // the duration that require.js should wait before abandoning the load
@@ -233,6 +240,9 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
 
         // code snippet
         'prism',
+
+        // handlebars templating solution, like moustache
+        'handlebars',
 
         // paths to app initialiser
         'AppInit',

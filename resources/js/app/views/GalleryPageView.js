@@ -16,6 +16,7 @@ define([
   'underscore',
   'backbone',
   'cosmosimageloader',
+  'handlebars',
 
   // required collections
   'App.Collections.GalleryCollection',
@@ -24,7 +25,7 @@ define([
   'App.Models.GalleryModel'
 
 // require js: defines instances
-], function($, _, Backbone, CosmosImageLoader, GalleryCollection, GalleryModel){
+], function($, _, Backbone, CosmosImageLoader, Handlebars, GalleryCollection, GalleryModel){
 
 
   var GalleryPageView = Backbone.View.extend({
@@ -68,9 +69,10 @@ define([
 
         // creates an item on the page
         createItem: function (curObj) {
-            //console.log(curObj.page_title);
-            // <img src="'+curObj.page_image_url+'">
-            this.galleryItemsTarget.append('<div class="four columns"><div class="panel"><a href="'+curObj.detail_Gen1+'" target="_blank"> <h6>'+curObj.page_title+'</h6><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></div></div>');
+
+            var source   = '<div class="four columns"><div class="panel"><a href="{{detail_Gen1}}" target="_blank"> <h6>{{page_title}}</h6><div class="image-target-image-container image-loader-target-{{id}}"></div></a></div></div>';
+            var template = Handlebars.compile(source);
+            this.galleryItemsTarget.append(template(curObj));
             var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
 
         },
