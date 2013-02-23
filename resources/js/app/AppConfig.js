@@ -130,7 +130,7 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
             'App.Views.SidemenuPageView':       'resources/js/app/views/SidemenuPageView',
 
             // paths to collections
-            //'App.Collections.ExampleCollection':  'resources/js/app/collections/ExampleCollection',
+            'App.Collections.GalleryCollection':  'resources/js/app/collections/GalleryCollection',
 
             // paths to models
             //'App.Models.ExampleModel':            'resources/js/app/models/ExampleModel'
@@ -262,10 +262,10 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
         'App.Views.SidemenuPageView',
 
         // paths to collections
-        //'App.Collections.ExampleCollection':  'resources/js/app/collections/ExampleCollection',
+        'App.Collections.GalleryCollection',
 
         // paths to models
-        //'App.Models.ExampleModel':            'resources/js/app/models/ExampleModel'
+        //'App.Models.ExampleModel',
         'App.Models.GalleryModel',
 
 

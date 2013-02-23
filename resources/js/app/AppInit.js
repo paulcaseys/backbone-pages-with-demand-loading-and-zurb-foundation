@@ -23,6 +23,10 @@ define([
   'App.Models.ConfigModel',
   'App.Models.StateModel',
   'App.Models.StateMenuModel',
+  'App.Models.GalleryModel',
+
+  // required collection
+  'App.Collections.GalleryCollection',
 
   // required views
   'App.Views.HomePageView',
@@ -37,7 +41,7 @@ define([
 
 
 // require js: defines instances
-], function($, _, Backbone, Router, ConfigModel, StateModel, StateMenuModel, HomePageView, GalleryPageView, HelpPageView, RaphaelPageView, ParallaxPageView, ExamplePageView, VideoPageView, SidemenuPageView){
+], function($, _, Backbone, Router, ConfigModel, StateModel, StateMenuModel, GalleryModel, GalleryCollection, HomePageView, GalleryPageView, HelpPageView, RaphaelPageView, ParallaxPageView, ExamplePageView, VideoPageView, SidemenuPageView){
 
 
 
@@ -53,6 +57,10 @@ define([
 
       // initialises the state controller for the menu
       App.Models.PageStateMenuModel = new StateMenuModel();
+
+      // initialises the feature details
+      App.Models.GalleryModel = new GalleryModel();
+      App.Collections.GalleryCollection = new GalleryCollection();
 
       // initialises the views onto the page
       App.Views.HomePageView = new HomePageView();

@@ -18,26 +18,26 @@ define([
   'cosmosimageloader',
 
   // required collections
-  //'App.Collections.HelloWorldCollection'
+  'App.Collections.GalleryCollection',
 
   // required models
   'App.Models.GalleryModel'
 
 // require js: defines instances
-], function($, _, Backbone, CosmosImageLoader, GalleryModel){
+], function($, _, Backbone, CosmosImageLoader, GalleryCollection, GalleryModel){
 
 
   var GalleryPageView = Backbone.View.extend({
 
 
-      // binds view to the existing skeleton of the App already present in the HTML.
-      el: $("#gallery-page"),
+        // binds view to the existing skeleton of the App already present in the HTML.
+        el: $("#gallery-page"),
 
-      // target for gallery
-      galleryItemsTarget: $('#gallery-items-target'),
+        // target for gallery
+        galleryItemsTarget: $('#gallery-items-target'),
 
-      // at initialization we bind to the relevant events
-      initialize: function() {
+        // at initialization we bind to the relevant events
+        initialize: function() {
 
         // hides the element until App.Models.StateModel.showView(WheteverView) calls the transitionIn() function
         $(this.el).hide();
@@ -45,75 +45,75 @@ define([
         // creates an example event listener
         this.on('testCall', this.testMethod, this);
 
-      },
+        },
 
-      // loops through the JSON array
-      onDataLoadComplete: function (response, dataResponse) {
-        //console.log(response);
-        //console.log(dataResponse[0].page_title);
+        // addes content from the correlating model, when it is loaded
+        addContentFromFeed: function() {
 
-        // clears the target
-        App.Views.GalleryPageView.galleryItemsTarget.html('');
+            // ewmoving notification
+            this.galleryItemsTarget.html('');
 
-        // loops through the dataResponse array
-        for (var i = 0; i < dataResponse.length; i++) {
-          dataResponse[i].id = i;
-          App.Views.GalleryPageView.createItem(dataResponse[i]);
-        }
-      },
+            // defines the current collection
+            var curCollection = App.Collections.GalleryCollection;
 
-      // creates an item on the page
-      createItem: function (curObj) {
-        //console.log(curObj.page_title);
-        // <img src="'+curObj.page_image_url+'">
-        this.galleryItemsTarget.append('<div class="four columns"><div class="panel"><a href="'+curObj.detail_Gen1+'" target="_blank"> <h6>'+curObj.page_title+'</h6><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></div></div>');
-        var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
+            // loops through collection
+            for (var i=0; i < curCollection.dataLoaded.length; i++) {
+                curCollection.dataLoaded[i].id = i;
+                var curObj = curCollection.dataLoaded[i];
+                this.createItem(curObj);
 
-      },
+            }
 
+        },
 
-      // method for the eventlistener
-      testMethod: function (e) {
-         console.log('GalleryPageView testMethod');
-      },
+        // creates an item on the page
+        createItem: function (curObj) {
+            //console.log(curObj.page_title);
+            // <img src="'+curObj.page_image_url+'">
+            this.galleryItemsTarget.append('<div class="four columns"><div class="panel"><a href="'+curObj.detail_Gen1+'" target="_blank"> <h6>'+curObj.page_title+'</h6><div class="image-target-image-container image-loader-target-'+curObj.id+'"></div></a></div></div>');
+            var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
+
+        },
 
 
+        // method for the eventlistener
+        testMethod: function (e) {
+            console.log('GalleryPageView testMethod');
+        },
 
 
-    /*******************
-     * TRANSITION IN/OUT
-     * these are called when the view is routed in / out
-     */
 
-      // transitions the view in
-      transitionIn: function () {
-        // adds eventlisteners
-        this.addEventListeners();
 
-        // basic way to display element
-        $(this.el).show();
+        /*******************
+        * TRANSITION IN/OUT
+        * these are called when the view is routed in / out
+        */
 
-        // loading notification
-        this.galleryItemsTarget.html('<div class="four columns"><br>Loading...</div>');
+        // transitions the view in
+        transitionIn: function () {
+            // adds eventlisteners
+            this.addEventListeners();
 
-        // loads the gallery items
-        var GItems = new GalleryModel();
-        //GItems.url = App.Data.GalleryData;
-        GItems.url = "http://cosmos.is/api/service/data/format/jsonp/?project_name=SummerAtTarget&project_password=6CB4816A23A965B5DFD58E45F4C23&table=unique_references&batch=1&batchSize=6&whereConditionArray=project_id||9&select=*&orderBy=vote_count||desc&callback=?";
-        GItems.type = 'GET';
-        GItems.dataType = 'jsonp';
-        GItems.fetch({success: this.onDataLoadComplete});
+            // basic way to display element
+            $(this.el).show();
 
-      },
+            // loading notification
+            this.galleryItemsTarget.html('<div class="four columns"><br>Loading...</div>');
 
-      // removes all eventlisteners
-      transitionOut: function () {
-        // removes eventlisteners
-        this.removeEventListeners();
+            //loads the collection
+            App.Collections.GalleryCollection.loadLatest();
 
-        // basic way to hide element
-        $(this.el).hide();
-      },
+
+        },
+
+        // removes all eventlisteners
+        transitionOut: function () {
+            // removes eventlisteners
+            this.removeEventListeners();
+
+            // basic way to hide element
+            $(this.el).hide();
+        },
 
 
 
