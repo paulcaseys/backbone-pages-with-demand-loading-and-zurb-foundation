@@ -3,9 +3,9 @@
  * Filename: js/app/models/ExampleModel
  *
  * example model
- * 
+ *
  */
-// 
+//
 
 
 // require js: defines the required js libraries and app files
@@ -35,7 +35,7 @@ define([
       }
 
     });
-     
+
 
 
 
