@@ -255,3 +255,13 @@ depending on your hosting solution, you may also require the following MIME type
     AddType application/x-font-woff .woff
 
 
+
+# Behaviour-Driven Development testing
+
+If you choose to run Behaviour-Driven Development testing, I have included jasmine.js files in
+in `test/`
+
+More information on BDD and jasmine.js can be viewed at http://pivotal.github.com/jasmine/
+
+A helpful walk-through is described here
+http://kilon.org/blog/2012/08/testing-backbone-requirejs-applications-with-jasmine/
