@@ -179,11 +179,34 @@ You need to run Chrome with the `--disable-web-security` argument to stop it blo
     open -a 'Google Chrome' --args --disable-web-security
 
 
-# Installing the Compass Gem
+# Installing the Zurb Foundation Compass Gem
 
 To create your first project using our Compass extension, you'll need to have the zurb-foundation gem installed. This will install Foundation and all necessary dependencies. Here's the command that will do this for you:
 
     sudo gem install zurb-foundation
+
+you will also need to use install an old foundation gem
+
+    gem install zurb-foundation --version 3.2.5
+
+you can test which versions of foundation you have installed by running
+
+    gem list
+
+note that a `Gemfile` exists in your project root. this file informs the project which version of zurb foundation to reference. more information can be found at http://stackoverflow.com/questions/15175775/how-can-i-specify-framework-version-in-compass-create
+
+
+# Compiling css with compass
+
+You may be used to simply running compass with
+
+    compass watch
+
+this method will still work if you only have one version of zurb foundation installed,
+
+however, if you have multiple versions, you should run the following command
+
+    bundle exec compass watch
 
 
 # Compiling the app javascript into one file
