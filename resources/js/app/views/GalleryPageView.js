@@ -73,7 +73,7 @@ define([
             var source   = '<div class="four columns"><div class="panel"><a href="{{detail_Gen1}}" target="_blank"> <h6>{{page_title}}</h6><div class="image-target-image-container image-loader-target-{{id}}"></div></a></div></div>';
             var template = Handlebars.compile(source);
             this.galleryItemsTarget.append(template(curObj));
-            var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.page_image_url}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
+            var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.uploaded_images[0].uploaded_image_path_original}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
 
         },
 
