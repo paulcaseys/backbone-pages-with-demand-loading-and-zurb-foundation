@@ -70,7 +70,7 @@ define([
         // creates an item on the page
         createItem: function (curObj) {
 
-            var source   = '<div class="four columns"><div class="panel"><a href="{{detail_Gen1}}" target="_blank"> <h6>{{page_title}}</h6><div class="image-target-image-container image-loader-target-{{id}}"></div></a></div></div>';
+            var source   = '<div class="large-4 small-12 columns"><div class="panel"><a href="{{detail_Gen1}}" target="_blank"> <h6>{{page_title}}</h6><div class="image-target-image-container image-loader-target-{{id}}"></div></a></div></div>';
             var template = Handlebars.compile(source);
             this.galleryItemsTarget.append(template(curObj));
             var _il1 = new Cosmos.Utils.ImageLoaderWithRescaleSlideShow('.image-loader-target-'+curObj.id, [{"img":curObj.uploaded_images[0].uploaded_image_path_original}], 1000, 1000, "rescaleEnabled", "centreEnabled", "elementResizeListenerEnabled");
