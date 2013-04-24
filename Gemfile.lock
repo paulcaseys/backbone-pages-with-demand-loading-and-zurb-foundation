@@ -7,18 +7,8 @@ GEM
       fssm (>= 0.2.7)
       sass (~> 3.1)
     fssm (0.2.9)
-    modular-scale (1.0.6)
-      compass (>= 0.12.1)
-      sass (>= 3.2.0)
-      sassy-math (>= 1.5)
-    rake (10.0.3)
     sass (3.2.3)
-    sassy-math (1.5)
-      compass (~> 0.11)
-    zurb-foundation (3.2.5)
-      compass (>= 0.12.2)
-      modular-scale (= 1.0.6)
-      rake
+    zurb-foundation (4.0.7)
       sass (>= 3.2.0)
 
 PLATFORMS
@@ -26,4 +16,4 @@ PLATFORMS
 
 DEPENDENCIES
   compass
-  zurb-foundation (= 3.2.5)
+  zurb-foundation (= 4.0.7)

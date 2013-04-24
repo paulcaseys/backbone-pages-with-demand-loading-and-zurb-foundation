@@ -1,0 +1,67 @@
+/*
+Syntax error: Invalid CSS after "#": expected id name, was " Get the direct..."
+        on line 1 of /Users/paulcasey/_projects/html_testing/_base_backbone_project/backbone_project_with_zurb_foundation/resources/sass/settings.scss
+
+1: /Users/paulcasey/_projects/html_testing/_base_backbone_project/backbone_project_with_zurb_foundation/resources/sass/settings.scss
+
+Backtrace:
+/Users/paulcasey/_projects/html_testing/_base_backbone_project/backbone_project_with_zurb_foundation/resources/sass/settings.scss:1
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:1134:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:1070:in `expected'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:1052:in `expr!'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:702:in `id_selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:657:in `simple_selector_sequence'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:626:in `_selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:605:in `selector'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:589:in `selector_sequence'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:514:in `ruleset'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:539:in `block_child'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:529:in `block_contents'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:70:in `stylesheet'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/scss/parser.rb:27:in `parse'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/engine.rb:342:in `_to_tree'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/engine.rb:315:in `_render'
+/Library/Ruby/Gems/1.8/gems/sass-3.2.3/lib/sass/../sass/engine.rb:262:in `render'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `to_proc'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `call'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:73:in `run_callback'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:55:in `callback_action'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/path.rb:31:in `create'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:26:in `created'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:25:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:25:in `created'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/state/directory.rb:17:in `refresh'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `each'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:17:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `loop'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/backends/polling.rb:15:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm/monitor.rb:26:in `run'
+/Library/Ruby/Gems/1.8/gems/fssm-0.2.9/lib/fssm.rb:70:in `monitor'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:87:in `perform'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:30
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44:in `call'
+/Library/Ruby/Gems/1.8/gems/compass-0.12.2/bin/compass:44
+/usr/bin/compass:19:in `load'
+/usr/bin/compass:19
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"#\": expected id name, was \" Get the direct...\"\A         on line 1 of /Users/paulcasey/_projects/html_testing/_base_backbone_project/backbone_project_with_zurb_foundation/resources/sass/settings.scss\A \A 1: /Users/paulcasey/_projects/html_testing/_base_backbone_project/backbone_project_with_zurb_foundation/resources/sass/settings.scss"; }

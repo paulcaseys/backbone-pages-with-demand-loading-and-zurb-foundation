@@ -1,50 +1,55 @@
-// Global Foundation Settings
+// Your custom settings file to override Foundation defaults
 @import "settings";
 
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+// ----------------------------------------
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
 
-// @import "foundation/foundation-global"; // *always required
-// @import "foundation/components/global"; // *always required
+// @import "compass/css3";
+// @import "foundation/settings";
+// @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+// @import "foundation/mixins/clearfix";
+// @import "foundation/mixins/css-triangle";
+// @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+// @import "foundation/mixins/respond-to";
+// @import "foundation/mixins/semantic-grid";
+
+// @import "modular-scale";
+// @import "foundation/common/globals";
+
+// Must include the grid for any responsiveness
+
 // @import "foundation/components/grid";
-// @import "foundation/components/visibility";
-// @import "foundation/components/block-grid";
-// @import "foundation/components/type";
-// @import "foundation/components/buttons";
-// @import "foundation/components/forms"; // *requires components/buttons
-// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
-// @import "foundation/components/button-groups"; // *requires components/buttons
-// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
-// @import "foundation/components/split-buttons"; // *requires components/buttons
-// @import "foundation/components/flex-video";
-// @import "foundation/components/section";
-// @import "foundation/components/top-bar";  // *requires components/grid
-// @import "foundation/components/orbit";
-// @import "foundation/components/reveal";
-// @import "foundation/components/joyride";
-// @import "foundation/components/clearing";
-// @import "foundation/components/alert-boxes";
-// @import "foundation/components/breadcrumbs";
-// @import "foundation/components/keystrokes";
-// @import "foundation/components/labels";
-// @import "foundation/components/inline-lists";
-// @import "foundation/components/pagination";
-// @import "foundation/components/panels";
-// @import "foundation/components/pricing-tables";
-// @import "foundation/components/progress-bars";
-// @import "foundation/components/side-nav";
-// @import "foundation/components/sub-nav";
-// @import "foundation/components/switch";
-// @import "foundation/components/magellan";
-// @import "foundation/components/tables";
-// @import "foundation/components/thumbs";
-// @import "foundation/components/tooltips";
-// @import "foundation/components/dropdown";
 
+// Control which common styles get compiled
 
+// @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+// @import "foundation/components/modules/tabs";
+// @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+// @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+// @import "foundation/components/modules/clearing";
+// @import "foundation/components/modules/joyride";
+
+// Media Queries Overrides
+// @import "foundation/components/modules/mqueries";
 
 @import "compass/css3/border-radius";
 
@@ -92,9 +97,7 @@ body {
 .item-2 {   width: 100px;   height: 100px; background-color: #ff0; float: left; margin-right: 20px;}
 .item-2 .inner-item-1 { visibility: hidden; width: 100%;    height: 100%; background-color: #0f0; float: left; margin-right: 20px;}
 
-.button-group.left { width: 50%; padding-left: 10px;}
-.button-group.right { width: 200px; text-align:right;}
-.button.active {background-color: #00f;}
+
 
 
 // gallery page
@@ -249,6 +252,10 @@ pre[class*="language-"] {   background: #f5f2f0;}
       .code-chunk .element { color: #976355; }
       .code-chunk .attr { color: #e5a648; }
 */
+
+
+
+
 
 
 
