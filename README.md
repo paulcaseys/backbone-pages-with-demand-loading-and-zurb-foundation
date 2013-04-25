@@ -1,4 +1,4 @@
-A Backbone.js base
+Zurb Foundation and Backbone.js boilerplate
 ==================================================
 
 Using common PureMVC and Gaia framework conventions. A good starting point for backbone.js projects.
@@ -188,6 +188,10 @@ To create your first project using our Compass extension, you'll need to have th
 you will also need to use install an old foundation gem
 
     gem install zurb-foundation --version 3.2.5
+
+or
+
+    gem install zurb-foundation --version 4.0.7
 
 you can test which versions of foundation you have installed by running
 

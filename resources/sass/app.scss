@@ -100,10 +100,10 @@ body {
 
 
 // menu at top of page
-#menu {  background: #777;  height: 30px; color: #fff; text-align: right;   overflow: hidden;}
+#menu {  background: #777;  height: 40px; color: #fff; text-align: right;   overflow: hidden;}
 #menu ul {  list-style: none;  margin: 0; padding: 0;}
-#menu ul li {  float: left;  margin-left: 10px;}
-#menu ul li a {  color: #fff;  line-height: 30px;  text-decoration: none;}
+#menu ul li {  float: left;  margin-left: 20px;}
+#menu ul li a {  font-size: emCalc(12px); text-transform: uppercase; color: #fff;  line-height: 40px;  text-decoration: none;}
 #menu ul li a:hover {  color: #ccc;}
 #menu ul li a.active {  color: #aaa;}
 
