@@ -50,6 +50,36 @@
 
 
 
+// sprites
+@import "utilities/_sprites";
+
+// sprite usage:
+//$sprites-homepage1x: sprite-map("sprites-homepage1x/*.png");
+//$sprites-homepage2x: sprite-map("sprites-homepage2x/*.png");
+//#home-page .area-1 .sprite-1 { @include sprite_css(gather-entry, $sprites-homepage1x, $sprites-homepage2x);}
+
+
+// loads a @2x image if on a retina device
+// usage: @include background-image-retina('../images/promo_site/hr-icon', 'png', 50px, 50px);
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      background-size: $width $height;
+      -webkit-background-size: $width $height;
+
+    }
+  }
+}
+
+
+
+
+
 html,
 body {
     margin: 0;
@@ -70,7 +100,7 @@ body {
 
 
 // menu at top of page
-#menu {  background: #444;  height: 30px; color: #fff; text-align: right;   overflow: hidden;}
+#menu {  background: #777;  height: 30px; color: #fff; text-align: right;   overflow: hidden;}
 #menu ul {  list-style: none;  margin: 0; padding: 0;}
 #menu ul li {  float: left;  margin-left: 10px;}
 #menu ul li a {  color: #fff;  line-height: 30px;  text-decoration: none;}
