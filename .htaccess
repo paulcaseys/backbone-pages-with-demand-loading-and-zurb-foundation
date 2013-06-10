@@ -9,6 +9,9 @@ AddType application/vnd.ms-fontobject .eot
 AddType font/ttf .ttf
 AddType font/otf .otf
 AddType application/x-font-woff .woff
+AddType video/webm .webm
+AddType video/ogg .ogv
+AddType video/mp4 .mp4
 
 
 #Gzip
