@@ -124,7 +124,7 @@ body {
 
 .button-group.left { width: 50%; padding-left: 10px;}
 .button-group.right { width: 200px; text-align:right;}
-.button.active {background-color: #00f;}
+.button.active {background-color: #333;}
 
 
 // gallery page
@@ -147,8 +147,8 @@ body {
 
 // overriding default values
 // main button
-.button {background-color:#246; border:0;}
-.button:hover {background-color:#71F;}
+.button {background-color:#777; border:0;}
+.button:hover {background-color:#333;}
 
 
 
