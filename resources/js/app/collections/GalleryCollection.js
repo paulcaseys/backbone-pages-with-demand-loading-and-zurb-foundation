@@ -43,7 +43,7 @@ define([
 
         // loads the feature items
         var CosmosItems = new GalleryModel();
-        CosmosItems.url = "http://cosmos.is/api/service/data/format/jsonp/?project_name=SummerAtTarget&project_password=6CB4816A23A965B5DFD58E45F4C23&table=unique_references&batch=1&batchSize=6&whereConditionArray=project_id||9&select=*&orderBy=vote_count||desc&callback=?";
+        CosmosItems.url = "http://cosmosis-api.com/api/service/data/format/jsonp/?project_name=SummerAtTarget&project_password=6CB4816A23A965B5DFD58E45F4C23&table=unique_references&batch=1&batchSize=6&whereConditionArray=project_id||9&select=*&orderBy=vote_count||desc&callback=?";
         CosmosItems.type = 'GET';
         CosmosItems.dataType = 'jsonp';
         CosmosItems.fetch({success: onDataLoadComplete});
